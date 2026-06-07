@@ -1,0 +1,195 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  updatedDate?: Date;
+  author: string;
+  category: string;
+  tags: string[];
+  image?: string;
+  imageAlt?: string;
+  slug: string;
+}
+
+const { title, description, pubDate, updatedDate, author, category, tags, image, imageAlt, slug } = Astro.props;
+
+const canonicalURL = new URL(`/blog/${slug}`, Astro.site).toString();
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "image": image ? new URL(image, Astro.site).toString() : new URL('/images/og-elefef.png', Astro.site).toString(),
+  "author": {
+    "@type": "Person",
+    "name": author,
+    "url": "https://elefef.com.br/quem-somos"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Agência Elefef",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://elefef.com.br/images/Copia-de-Copia-de-elefef.png"
+    }
+  },
+  "datePublished": pubDate.toISOString(),
+  "dateModified": (updatedDate ?? pubDate).toISOString(),
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalURL },
+  "url": canonicalURL,
+  "keywords": tags.join(', '),
+  "articleSection": category,
+  "inLanguage": "pt-BR"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://elefef.com.br" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://elefef.com.br/blog" },
+    { "@type": "ListItem", "position": 3, "name": title, "item": canonicalURL }
+  ]
+};
+
+const dateFormatter = new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<BaseLayout
+  title={`${title} – Blog Elefef`}
+  description={description}
+  canonical={canonicalURL}
+  ogImage={image ?? '/images/og-elefef.png'}
+  ogType="article"
+  schema={[articleSchema, breadcrumbSchema]}
+>
+  <Header />
+
+  <main>
+    <!-- Hero do artigo -->
+    <section class="bg-azul pt-32 pb-12">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb mb-6" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span class="mx-2 text-white/40">/</span>
+          <a href="/blog" class="text-white/70 hover:text-white transition-colors">Blog</a>
+          <span class="mx-2 text-white/40">/</span>
+          <span class="text-white/50 line-clamp-1">{title}</span>
+        </nav>
+
+        <span class="section-tag light mb-4">{category}</span>
+        <h1 class="text-white font-heading font-bold mb-4 max-w-3xl leading-tight" style="font-size: clamp(26px, 4vw, 42px);">
+          {title}
+        </h1>
+        <p class="text-white/80 text-lg max-w-2xl mb-6">{description}</p>
+        <div class="flex items-center gap-4 text-white/60 text-sm flex-wrap">
+          <span class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            {author}
+          </span>
+          <span class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <time datetime={pubDate.toISOString()}>{dateFormatter.format(pubDate)}</time>
+          </span>
+          {updatedDate && (
+            <span class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              Atualizado em <time datetime={updatedDate.toISOString()}>{dateFormatter.format(updatedDate)}</time>
+            </span>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <!-- Conteúdo -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12">
+
+          <!-- Artigo -->
+          <article class="prose-blog max-w-none">
+            {image && (
+              <img
+                src={image}
+                alt={imageAlt ?? title}
+                class="w-full rounded-xl mb-8 object-cover max-h-[400px]"
+                loading="lazy"
+              />
+            )}
+            <slot />
+          </article>
+
+          <!-- Sidebar -->
+          <aside class="lg:pt-0">
+            <div class="sticky top-28 space-y-6">
+
+              <!-- CTA sidebar -->
+              <div class="bg-azul rounded-xl p-6 text-center">
+                <p class="text-white font-heading font-semibold text-lg mb-2">Precisa de ajuda com tráfego pago?</p>
+                <p class="text-white/80 text-sm mb-5">Fale com a Elefef e receba uma análise gratuita das suas campanhas.</p>
+                <a
+                  href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20li%20o%20blog%20da%20Elefef%20e%20gostaria%20de%20conversar"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-ciano btn-sm w-full text-center block"
+                >
+                  Falar no WhatsApp
+                </a>
+              </div>
+
+              <!-- Tags -->
+              {tags.length > 0 && (
+                <div class="border border-borda rounded-xl p-5">
+                  <h3 class="font-heading font-semibold text-[#1a1a1a] text-sm uppercase tracking-wide mb-3">Tags</h3>
+                  <div class="flex flex-wrap gap-2">
+                    {tags.map(tag => (
+                      <span class="bg-[#f0f6ff] text-azul text-xs px-3 py-1 rounded-full font-medium">#{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <!-- Links rápidos -->
+              <div class="border border-borda rounded-xl p-5">
+                <h3 class="font-heading font-semibold text-[#1a1a1a] text-sm uppercase tracking-wide mb-3">Nossos Serviços</h3>
+                <ul class="space-y-2 text-sm text-azul">
+                  <li><a href="/gestao-de-trafego" class="hover:underline">→ Gestão de Tráfego Pago</a></li>
+                  <li><a href="/google-ads-ecommerce" class="hover:underline">→ Google Ads para E-commerce</a></li>
+                  <li><a href="/meta-ads-ecommerce" class="hover:underline">→ Meta Ads para E-commerce</a></li>
+                  <li><a href="/amazon-ads" class="hover:underline">→ Amazon Ads</a></li>
+                  <li><a href="/shopee-ads" class="hover:underline">→ Shopee Ads</a></li>
+                  <li><a href="/marketing-politico" class="hover:underline">→ Marketing Político</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Pronto para <span>transformar seus anúncios?</span></h2>
+        <p>Nossa equipe analisa sua conta gratuitamente e mostra onde você está perdendo dinheiro.</p>
+        <div class="flex gap-4 justify-center flex-wrap mt-8">
+          <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20conversar%20sobre%20gest%C3%A3o%20de%20tr%C3%A1fego" class="btn btn-ciano btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a href="/orcamento" class="btn btn-outline btn-lg">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

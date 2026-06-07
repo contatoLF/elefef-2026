@@ -1,0 +1,174 @@
+---
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => currentPath === path || currentPath.startsWith(path + '/');
+---
+
+<header class="header fixed top-0 left-0 right-0 z-50 bg-white shadow-[0_2px_12px_rgba(0,0,0,.08)] transition-shadow duration-200">
+  <div class="container">
+    <div class="flex items-center justify-between h-[72px]">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center" aria-label="Agência Elefef — Home">
+        <img src="/images/Copia-de-Copia-de-elefef.png" alt="Agência Elefef" class="h-11 w-auto" width="132" height="44" />
+      </a>
+
+      <!-- Nav desktop -->
+      <nav class="hidden md:flex items-center gap-1" id="main-nav" aria-label="Navegação principal">
+
+        <div class="relative group">
+          <a href="/quem-somos" class={`nav-link flex items-center px-3.5 py-2 font-heading text-[13.5px] font-medium rounded-md transition-colors ${isActive('/quem-somos') ? 'text-azul bg-[#f0f6ff]' : 'text-[#333] hover:text-azul hover:bg-[#f0f6ff]'}`}>
+            Quem somos
+          </a>
+        </div>
+
+        <div class="relative group nav-item">
+          <a href="/gestao-de-trafego" class={`nav-link flex items-center gap-1 px-3.5 py-2 font-heading text-[13.5px] font-medium rounded-md transition-colors ${isActive('/gestao-de-trafego') ? 'text-azul bg-[#f0f6ff]' : 'text-[#333] hover:text-azul hover:bg-[#f0f6ff]'}`} data-dropdown="trafego">
+            Gestão de Tráfego
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown absolute top-full left-0 bg-white border border-borda rounded-[10px] shadow-[0_8px_32px_rgba(0,0,0,.12)] min-w-[240px] opacity-0 invisible translate-y-2 transition-all duration-200 pointer-events-none py-2 pt-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto">
+            <a href="/google-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Google Ads</a>
+            <a href="/meta-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Meta Ads</a>
+            <a href="/tiktok-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">TikTok Ads</a>
+            <a href="/bing-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Bing Ads</a>
+            <a href="/globo-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Globo Ads</a>
+            <a href="/shopee-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Shopee Ads</a>
+            <a href="/amazon-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Amazon Ads</a>
+          </div>
+        </div>
+
+        <div class="relative group nav-item">
+          <a href="/ecommerce" class={`nav-link flex items-center gap-1 px-3.5 py-2 font-heading text-[13.5px] font-medium rounded-md transition-colors ${isActive('/ecommerce') ? 'text-azul bg-[#f0f6ff]' : 'text-[#333] hover:text-azul hover:bg-[#f0f6ff]'}`} data-dropdown="ecommerce">
+            E-commerce
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown absolute top-full left-0 bg-white border border-borda rounded-[10px] shadow-[0_8px_32px_rgba(0,0,0,.12)] min-w-[280px] opacity-0 invisible translate-y-2 transition-all duration-200 pointer-events-none py-2 pt-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto">
+            <a href="/consultoria-ecommerce" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Consultoria em E-commerce</a>
+            <a href="/implantacao-ecommerce" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Implantação de E-commerce</a>
+            <a href="/migracao-plataforma-ecommerce" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Migração de Plataforma</a>
+            <a href="/suporte-evolucao" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Suporte e Evolução</a>
+            <a href="/seo-ecommerce" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">SEO para E-commerce</a>
+          </div>
+        </div>
+
+        <div class="relative group nav-item">
+          <a href="/marketing-politico" class={`nav-link flex items-center gap-1 px-3.5 py-2 font-heading text-[13.5px] font-medium rounded-md transition-colors ${isActive('/marketing-politico') ? 'text-azul bg-[#f0f6ff]' : 'text-[#333] hover:text-azul hover:bg-[#f0f6ff]'}`} data-dropdown="politico">
+            Marketing Político
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown absolute top-full left-0 bg-white border border-borda rounded-[10px] shadow-[0_8px_32px_rgba(0,0,0,.12)] min-w-[280px] opacity-0 invisible translate-y-2 transition-all duration-200 pointer-events-none py-2 pt-4 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto">
+            <a href="/trafego-pago-eleitoral-meta-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Tráfego Eleitoral — Meta Ads</a>
+            <a href="/trafego-pago-eleitoral-youtube-ads" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Tráfego Eleitoral — YouTube Ads</a>
+            <a href="/site-para-candidato-politico" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Site para Candidato</a>
+            <a href="/landing-page-eleitoral" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Landing Page Eleitoral</a>
+            <a href="/financiamento-coletivo-eleitoral" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Financiamento Coletivo</a>
+            <a href="/consultoria-de-campanha-eleitoral-digital" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Consultoria Eleitoral Digital</a>
+            <a href="/monitoramento-de-campanha-eleitoral-online" class="block px-5 py-2.5 text-sm text-[#333] hover:bg-[#f0f6ff] hover:text-azul transition-colors">Monitoramento Online</a>
+          </div>
+        </div>
+
+      </nav>
+
+      <!-- CTA desktop -->
+      <a href="/orcamento" class="btn btn-primary hidden md:inline-block ml-3">Orçamento</a>
+
+      <!-- Toggle mobile -->
+      <button class="menu-toggle md:hidden flex flex-col justify-center gap-[5px] w-[38px] h-[38px] cursor-pointer border-none bg-none p-1" aria-label="Menu" aria-expanded="false">
+        <span class="block h-[2.5px] bg-[#333] rounded transition-all duration-200"></span>
+        <span class="block h-[2.5px] bg-[#333] rounded transition-all duration-200"></span>
+        <span class="block h-[2.5px] bg-[#333] rounded transition-all duration-200"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Nav mobile (controlada pelo JS no BaseLayout) -->
+  <div id="main-nav" class="hidden md:hidden fixed top-[72px] left-0 right-0 bottom-0 bg-white overflow-y-auto z-50 px-6 py-6 shadow-xl mobile-nav" aria-hidden="true">
+    <a href="/quem-somos" class="block py-3.5 px-2 font-heading text-[15px] font-medium text-[#333] border-b border-borda">Quem somos</a>
+
+    <div class="nav-item">
+      <button class="nav-link w-full flex items-center justify-between py-3.5 px-2 font-heading text-[15px] font-medium text-[#333] border-b border-borda bg-none border-none cursor-pointer" data-dropdown="trafego">
+        Gestão de Tráfego
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="dropdown overflow-hidden" style="max-height:0;transition:max-height .3s ease;">
+        <a href="/google-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Google Ads</a>
+        <a href="/meta-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Meta Ads</a>
+        <a href="/tiktok-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">TikTok Ads</a>
+        <a href="/bing-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Bing Ads</a>
+        <a href="/globo-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Globo Ads</a>
+        <a href="/shopee-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Shopee Ads</a>
+        <a href="/amazon-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Amazon Ads</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-link w-full flex items-center justify-between py-3.5 px-2 font-heading text-[15px] font-medium text-[#333] border-b border-borda bg-none border-none cursor-pointer" data-dropdown="ecommerce">
+        E-commerce
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="dropdown overflow-hidden" style="max-height:0;transition:max-height .3s ease;">
+        <a href="/consultoria-ecommerce" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Consultoria em E-commerce</a>
+        <a href="/implantacao-ecommerce" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Implantação de E-commerce</a>
+        <a href="/migracao-plataforma-ecommerce" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Migração de Plataforma</a>
+        <a href="/suporte-evolucao" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Suporte e Evolução</a>
+        <a href="/seo-ecommerce" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">SEO para E-commerce</a>
+      </div>
+    </div>
+
+    <div class="nav-item">
+      <button class="nav-link w-full flex items-center justify-between py-3.5 px-2 font-heading text-[15px] font-medium text-[#333] border-b border-borda bg-none border-none cursor-pointer" data-dropdown="politico">
+        Marketing Político
+        <svg class="w-4 h-4 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="dropdown overflow-hidden" style="max-height:0;transition:max-height .3s ease;">
+        <a href="/trafego-pago-eleitoral-meta-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Tráfego Eleitoral — Meta Ads</a>
+        <a href="/trafego-pago-eleitoral-youtube-ads" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Tráfego Eleitoral — YouTube Ads</a>
+        <a href="/site-para-candidato-politico" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Site para Candidato</a>
+        <a href="/landing-page-eleitoral" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Landing Page Eleitoral</a>
+        <a href="/financiamento-coletivo-eleitoral" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Financiamento Coletivo</a>
+        <a href="/consultoria-de-campanha-eleitoral-digital" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Consultoria Eleitoral</a>
+        <a href="/monitoramento-de-campanha-eleitoral-online" class="block py-2.5 pl-8 pr-2 text-sm text-[#555]">Monitoramento Online</a>
+      </div>
+    </div>
+
+    <a href="/blog" class="block py-3.5 px-2 font-heading text-[15px] font-medium text-[#333] border-b border-borda">Blog</a>
+
+    <div class="mt-6">
+      <a href="/orcamento" class="btn btn-primary w-full text-center block">Solicitar Orçamento</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.contains('!block');
+    mobileNav?.classList.toggle('!block');
+    mobileNav?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    // animate hamburger
+    const spans = toggle.querySelectorAll('span');
+    if (!isOpen) {
+      spans[0]?.setAttribute('style', 'transform: translateY(7.5px) rotate(45deg)');
+      spans[1]?.setAttribute('style', 'opacity: 0');
+      spans[2]?.setAttribute('style', 'transform: translateY(-7.5px) rotate(-45deg)');
+    } else {
+      spans.forEach(s => s.removeAttribute('style'));
+    }
+  });
+
+  // Mobile dropdowns
+  document.querySelectorAll('.mobile-nav .nav-item button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.nav-item');
+      const dropdown = item?.querySelector('.dropdown') as HTMLElement | null;
+      if (!dropdown) return;
+      const isOpen = dropdown.style.maxHeight !== '0px' && dropdown.style.maxHeight !== '';
+      dropdown.style.maxHeight = isOpen ? '0px' : '600px';
+      const svg = btn.querySelector('svg');
+      svg?.setAttribute('style', isOpen ? '' : 'transform: rotate(180deg)');
+    });
+  });
+</script>

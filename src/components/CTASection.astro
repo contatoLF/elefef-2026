@@ -1,0 +1,38 @@
+---
+interface Props {
+  heading?: string;
+  headingHighlight?: string;
+  subtext?: string;
+  primaryText?: string;
+  primaryHref?: string;
+  secondaryText?: string;
+  secondaryHref?: string;
+}
+
+const {
+  heading = 'Pronto para',
+  headingHighlight = 'impulsionar seu negócio?',
+  subtext = 'Nossa expertise em tráfego pago transforma cliques em clientes reais. Receba uma análise gratuita do seu potencial de crescimento!',
+  primaryText = 'Falar no WhatsApp',
+  primaryHref = 'https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20conversar',
+  secondaryText = 'Solicitar Orçamento',
+  secondaryHref = '/orcamento',
+} = Astro.props;
+---
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>{heading} <span>{headingHighlight}</span></h2>
+    <p>{subtext}</p>
+    <div class="flex gap-4 justify-center flex-wrap mt-8">
+      <a
+        href={primaryHref}
+        class="btn btn-ciano btn-lg"
+        {primaryHref.startsWith('http') ? 'target="_blank" rel="noopener"' : ''}
+      >
+        {primaryText}
+      </a>
+      <a href={secondaryHref} class="btn btn-outline btn-lg">{secondaryText}</a>
+    </div>
+  </div>
+</section>

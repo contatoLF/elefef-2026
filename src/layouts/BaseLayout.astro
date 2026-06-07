@@ -1,0 +1,143 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  schema?: object | object[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/images/og-elefef.png',
+  ogType = 'website',
+  schema,
+  noindex = false,
+} = Astro.props;
+
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Agência Elefef",
+  "url": "https://elefef.com.br",
+  "logo": "https://elefef.com.br/images/Copia-de-Copia-de-elefef.png",
+  "description": "Agência especializada em gestão de tráfego pago (Google Ads, Meta Ads, Shopee Ads, Amazon Ads) e soluções completas para e-commerce.",
+  "telephone": "+55-11-94063-5670",
+  "email": "contato@elefef.com.br",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://www.instagram.com/elefef",
+    "https://www.facebook.com/elefef"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Agência Elefef",
+  "url": "https://elefef.com.br",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://elefef.com.br/blog?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+
+const schemas = [orgSchema, websiteSchema, ...(schema ? (Array.isArray(schema) ? schema : [schema]) : [])];
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- Preload fontes críticas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Figtree:wght@400;500;600&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Figtree:wght@400;500;600&display=swap" />
+  </noscript>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/Copia-de-Copia-de-elefef.png" type="image/png" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content={ogType} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:image" content={new URL(ogImage, Astro.site).toString()} />
+  <meta property="og:site_name" content="Agência Elefef" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={new URL(ogImage, Astro.site).toString()} />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemas)} />
+</head>
+<body>
+  <slot />
+
+  <!-- FAQ accordion script (zero-dependency, inline) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // FAQ accordion
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const isOpen = item?.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-question')?.classList.remove('open'); });
+          if (!isOpen) { item?.classList.add('open'); btn.classList.add('open'); }
+        });
+      });
+
+      // Mobile menu
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('#main-nav');
+      toggle?.addEventListener('click', () => {
+        nav?.classList.toggle('mobile-open');
+        toggle.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(nav?.classList.contains('mobile-open')));
+      });
+
+      // Mobile dropdown
+      document.querySelectorAll('.nav-link[data-dropdown]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            link.closest('.nav-item')?.classList.toggle('open');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

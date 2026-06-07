@@ -1,0 +1,33 @@
+# Redirects Cloudflare Pages — Agência Elefef
+# Mapeia URLs antigas (.html) para novas (sem extensão)
+
+/index.html             /               301
+/quem-somos.html        /quem-somos     301
+/gestao-de-trafego.html /gestao-de-trafego 301
+/google-ads.html        /google-ads     301
+/google-ads-ecommerce.html /google-ads-ecommerce 301
+/meta-ads.html          /meta-ads       301
+/meta-ads-ecommerce.html /meta-ads-ecommerce 301
+/tiktok-ads.html        /tiktok-ads     301
+/bing-ads.html          /bing-ads       301
+/globo-ads.html         /globo-ads      301
+/shopee-ads.html        /shopee-ads     301
+/amazon-ads.html        /amazon-ads     301
+/ecommerce.html         /ecommerce      301
+/consultoria-ecommerce.html /consultoria-ecommerce 301
+/implantacao-ecommerce.html /implantacao-ecommerce 301
+/migracao-plataforma-ecommerce.html /migracao-plataforma-ecommerce 301
+/suporte-evolucao.html  /suporte-evolucao 301
+/seo-ecommerce.html     /seo-ecommerce  301
+/gestao-ecommerce.html  /gestao-ecommerce 301
+/trafego-local.html     /trafego-local  301
+/marketing-politico.html /marketing-politico 301
+/trafego-pago-eleitoral-meta-ads.html /trafego-pago-eleitoral-meta-ads 301
+/trafego-pago-eleitoral-youtube-ads.html /trafego-pago-eleitoral-youtube-ads 301
+/site-para-candidato-politico.html /site-para-candidato-politico 301
+/landing-page-eleitoral.html /landing-page-eleitoral 301
+/financiamento-coletivo-eleitoral.html /financiamento-coletivo-eleitoral 301
+/consultoria-de-campanha-eleitoral-digital.html /consultoria-de-campanha-eleitoral-digital 301
+/monitoramento-de-campanha-eleitoral-online.html /monitoramento-de-campanha-eleitoral-online 301
+/orcamento.html         /orcamento      301
+/solucoes.html          /solucoes       301
