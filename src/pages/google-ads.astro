@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Gestão de Google Ads",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Gestão profissional de Google Ads: Search, Display, YouTube e Max Performance. Campanhas otimizadas diariamente com relatórios semanais e mensais.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Gestão de Tráfego no Google Ads para Empresas – Agência Elefef"
+  description="Gestão profissional de Google Ads: Search, Display, YouTube e Max Performance. Campanhas otimizadas diariamente com relatórios semanais e mensais. Fale conosco."
+  canonical="https://elefef.com.br/google-ads"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Gestão de Tráfego</p>
+        <h1>Gestão de Tráfego Pago no Google Ads para Empresas que Querem Crescer</h1>
+        <p>Apareça no topo do Google quando seu cliente está procurando exatamente o que você vende. Campanhas otimizadas diariamente com estratégia, dados e resultado real.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-img">
+            <img src="/img/google-ads-para-negocios-locais.png" alt="Agência Google Ads" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <span class="section-tag">Como o Google Ads pode gerar mais clientes</span>
+            <div class="divider left"></div>
+            <h2>Você está pagando por cliques que não convertem?</h2>
+            <p>Campanhas mal configuradas desperdiçam verba todos os dias. Palavras-chave erradas, anúncios genéricos e lances sem estratégia fazem o investimento evaporar sem retorno.</p>
+            <p>Na Élefef, gerenciamos suas campanhas no Google com metodologia profissional: estrutura correta, otimização contínua e relatórios claros para você acompanhar cada real investido.</p>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Campanhas de Search — capture quem está pesquisando agora</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Campanhas de Display — retenha e reconquiste visitantes</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Campanhas de Vídeo (YouTube) — construa autoridade com vídeos</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Max Performance — IA do Google a serviço dos seus resultados</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Google Shopping — ideal para e-commerce com feed otimizado</li>
+            </ul>
+            <a href="/orcamento" class="btn btn-primary">Quero campanhas que convertem</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCOPO DE TRABALHO -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Campanha de Google Ads: o que fazemos por você</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Setup inicial e <span>rotina de trabalho</span></h2>
+          <p class="section-sub">Desde a configuração inicial até a otimização diária, você tem uma equipe trabalhando pela performance das suas campanhas.</p>
+        </div>
+        <table class="freq-table">
+          <thead><tr><th>Frequência</th><th>Atividades realizadas</th></tr></thead>
+          <tbody>
+            <tr><td>Setup inicial</td><td>Instalação/verificação de Google Tag Manager, Google Analytics 4, Google Search Console e Google Meu Negócio</td></tr>
+            <tr><td>Diariamente</td><td>Acompanhamento de saldos e consumos de investimento na conta de anúncios</td></tr>
+            <tr><td>Semanalmente</td><td>Otimização de campanhas de Pesquisa, Display, Vídeo (YouTube) e Max Performance · Entrega de relatório semanal automatizado</td></tr>
+            <tr><td>Mensalmente</td><td>Reunião com o cliente para alinhamento geral do projeto · Emissão de boletos e encaminhamento de NFs das plataformas</td></tr>
+            <tr><td>Trimestralmente</td><td>Criação de Dashboards no Google Looker Studio · Apresentação de relatório personalizado com plano de mídia para o próximo período</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ANÁLISE GRATUITA -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que contratar uma agência especialista em Google Ads?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Fale agora com um <span>especialista Élefef</span></h2>
+          <p class="section-sub">Receba uma análise gratuita da sua conta atual e descubra o potencial real dos seus anúncios no Google.</p>
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20sobre%20Gest%C3%A3o%20de%20Tr%C3%A1fego%20Google%20Ads" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Solicitar Análise Gratuita pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que a Élefef?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Diferenciais que fazem <span>você crescer com segurança</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Transparência total</h3><p>O investimento em mídia é pago por você diretamente ao Google. Nenhum centavo passa pela conta da Élefef.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Sua conta é sua</h3><p>A conta do Google Ads pertence ao cliente, não à agência. Se quiser sair, leva tudo consigo sem perder histórico.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Relatórios automatizados</h3><p>Relatórios semanais e mensais automatizados. Você sempre sabe o que está acontecendo com sua verba.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Nota fiscal em tudo</h3><p>Todos os serviços são emitidos com nota fiscal. Transparência e segurança jurídica do início ao fim.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Sem multa de rescisão</h3><p>Qualquer parte pode encerrar o contrato com apenas 30 dias de aviso por e-mail. Sem multa, sem burocracia.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Atendimento por WhatsApp</h3><p>Suporte no horário comercial via WhatsApp. Reuniões mensais agendadas e resposta ágil a dúvidas e demandas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">FAQ</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Perguntas frequentes sobre <span>Google Ads</span></h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">Quanto preciso investir em Google Ads por mês?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Não existe valor mínimo obrigatório imposto pela Élefef. O ideal é que o investimento em mídia seja definido de acordo com o seu segmento, concorrência e objetivos. Indicamos um valor mínimo que faça sentido estratégico para o seu negócio durante o diagnóstico inicial. O pagamento da verba de mídia vai direto para o Google, sem passar pela agência.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Em quanto tempo verei resultados com o Google Ads?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">As campanhas de Search (pesquisa) costumam gerar resultados nas primeiras semanas, pois atingem pessoas com intenção de compra imediata. Campanhas de branding e Max Performance levam de 30 a 90 dias para o algoritmo do Google otimizar ao máximo. Acompanharemos os resultados semanalmente e faremos ajustes contínuos.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">A conta de anúncios fica no meu nome ou no nome da agência?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">A conta de anúncios fica 100% no seu nome. A Élefef trabalha como gestora, não como proprietária da conta. Isso significa que todo o histórico, audiências e dados acumulados ao longo do tempo são seus e ficam com você caso o contrato encerre.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Preciso ter um site para anunciar no Google?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Para campanhas de Search, Display e YouTube, sim — você precisa de uma página de destino. Para campanhas de geração de ligações (Call Ads), o site não é obrigatório. Avaliamos a melhor estrutura para o seu caso durante o diagnóstico inicial.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Como é feito o acompanhamento dos resultados?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Você recebe relatórios semanais e mensais automatizados com as principais métricas: impressões, cliques, conversões, custo por conversão e ROAS. Trimestralmente, desenvolvemos dashboards personalizados no Google Looker Studio e apresentamos um relatório completo com plano de mídia para o próximo período.</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Pronto para aparecer no <span>topo do Google?</span></h2>
+        <p>Fale agora com um especialista da Élefef e receba uma proposta personalizada para o seu negócio. Sem compromisso.</p>
+        <div class="cta-btns">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

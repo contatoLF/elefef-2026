@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Consultoria em E-commerce",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Consultoria especializada em e-commerce. Diagnóstico completo do ponto A ao ponto B com planejamento detalhado, prazos e custos reais para sua loja virtual.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Consultoria em E-commerce – Agência Elefef"
+  description="Consultoria especializada em e-commerce. Diagnóstico completo do ponto A ao ponto B com planejamento detalhado, prazos e custos reais para sua loja virtual."
+  canonical="https://elefef.com.br/consultoria-ecommerce"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Soluções E-commerce</p>
+        <h1>Consultoria em E-commerce</h1>
+        <p>Um serviço similar a um clínico geral na medicina: ouvimos, diagnosticamos e planejamos o caminho certo para o seu negócio digital.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20de%20e-commerce" class="btn btn-ciano btn-lg" target="_blank" rel="noopener">Avaliação Gratuita</a>
+          <a href="/orcamento" class="btn btn-outline btn-lg">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-img">
+            <img src="/img/consultoria-em-ecommerce-.png" alt="Consultoria em E-commerce" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <span class="section-tag">Metodologia</span>
+            <div class="divider left"></div>
+            <h2>Do ponto A ao ponto B com clareza e estratégia</h2>
+            <p>Nossa consultoria é baseada em dois pontos fundamentais:</p>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Ponto A — Diagnóstico:</strong> Ouvimos o cliente, diagnosticamos pontos fortes e fracos, entendemos o histórico e o mercado.</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Ponto B — Objetivo:</strong> Definimos metas claras e mensuráveis em conjunto com o cliente.</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Planejamento detalhado com tarefas, prazos e custos reais</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Avaliação gratuita para novos clientes</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Relatório com plano de ação detalhado</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20gratuita" class="btn btn-primary" target="_blank" rel="noopener">Solicitar Avaliação Gratuita</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUEM -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Para quem é</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Para quem é este <span>serviço?</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+            <h3>Quem quer abrir uma loja</h3>
+            <p>Ainda não tem e-commerce mas quer entrar no mercado digital? A consultoria vai indicar a melhor plataforma, estratégia e investimento necessário.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h3>Quem quer vender mais</h3>
+            <p>Tem uma loja mas não está satisfeito com os resultados? Identificamos os gargalos e criamos um plano para aumentar a conversão e o faturamento.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <h3>Quem quer migrar de plataforma</h3>
+            <p>Insatisfeito com sua plataforma atual? Avaliamos as melhores opções e planejamos a migração sem perda de dados ou de SEO.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATAFORMAS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Plataformas</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Expertise em todas as <span>plataformas</span></h2>
+          <p class="section-sub">Temos experiência prática em todas as principais plataformas de e-commerce do mercado brasileiro.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card text-center">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+            <h3>NuvemShop</h3>
+            <p>Parceiro oficial. Plataforma ideal para pequenos e médios negócios com ótimo custo-benefício.</p>
+          </div>
+          <div class="card text-center">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <h3>Tray Commerce</h3>
+            <p>Parceiro oficial Tray. Ideal para médias e grandes lojas com necessidade de personalização avançada.</p>
+          </div>
+          <div class="card text-center">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <h3>Shopify</h3>
+            <p>Plataforma global robusta ideal para quem quer escalar e vender internacionalmente.</p>
+          </div>
+          <div class="card text-center">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+            <h3>VTEX &amp; WooCommerce</h3>
+            <p>Soluções enterprise e open-source para negócios com necessidades avançadas de personalização.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Avaliação gratuita para <span>o seu e-commerce.</span></h2>
+        <p>Fale conosco e receba uma análise gratuita da situação atual do seu negócio digital.</p>
+        <div class="cta-btns">
+          <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20quero%20uma%20avalia%C3%A7%C3%A3o%20gratuita" class="btn btn-ciano btn-lg" target="_blank" rel="noopener">Avaliação Gratuita</a>
+          <a href="/orcamento" class="btn btn-outline btn-lg">Solicitar Orçamento</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

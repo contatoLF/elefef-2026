@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Marketing Político Digital",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Marketing político digital para candidatos: gestão de Meta Ads, YouTube Ads, site eleitoral, landing pages e monitoramento. Dentro das normas do TSE.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Marketing Político Digital: Tráfego Pago para Campanhas Eleitorais – Agência Elefef"
+  description="Marketing político digital para candidatos: gestão de Meta Ads, YouTube Ads, site eleitoral, landing pages e monitoramento. Dentro das normas do TSE. Solicite orçamento."
+  canonical="https://elefef.com.br/marketing-politico"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Marketing Político</p>
+        <h1>Marketing Político Digital: Estratégias de Tráfego Pago para Campanhas Eleitorais</h1>
+        <p>Soluções digitais completas para candidatos a vereador, deputado, prefeito e senador. Todas as estratégias dentro das normas do TSE e da legislação eleitoral vigente.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Marketing%20Pol%C3%ADtico%20Digital" class="btn btn-ciano btn-lg" target="_blank" rel="noopener">Falar com Especialista pelo WhatsApp</a>
+          <a href="/orcamento" class="btn btn-outline btn-lg">Solicitar Proposta</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Como o marketing digital transforma campanhas políticas em vitórias eleitorais</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Serviços de <span>Marketing Político Digital</span></h2>
+          <p class="section-sub">Da pré-campanha ao dia da eleição — cobertura digital completa para candidatos que querem vencer com estratégia.</p>
+        </div>
+        <div class="cards-grid">
+          <a href="/trafego-pago-eleitoral-meta-ads" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+            <h3>Tráfego Pago Eleitoral — Meta Ads</h3>
+            <p>Anúncios no Facebook e Instagram para alcançar eleitores por bairro, cidade e perfil. Campanhas de reconhecimento, engajamento e conversão.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/trafego-pago-eleitoral-youtube-ads" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <h3>Tráfego Pago Eleitoral — YouTube Ads</h3>
+            <p>Mídia programática em vídeo no YouTube durante a pré-campanha. Máxima cobertura e fixação da imagem do candidato antes da corrida eleitoral.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/site-para-candidato-politico" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <h3>Site para Candidato Político</h3>
+            <p>Site oficial de campanha: rápido, responsivo, com blog, redes sociais e integração com sistemas de arrecadação. Central de todas as ações digitais.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/landing-page-eleitoral" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+            <h3>Landing Page Eleitoral</h3>
+            <p>Páginas de alta conversão para captar voluntários, leads e cadastros na base eleitoral. Foco total em uma única ação.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/financiamento-coletivo-eleitoral" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3>Financiamento Coletivo Eleitoral</h3>
+            <p>Implantação de plataformas de crowdfunding homologadas pelo TSE. Transforme sua base eleitoral em financiadores da campanha.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/consultoria-de-campanha-eleitoral-digital" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+            <h3>Consultoria de Campanha Eleitoral Digital</h3>
+            <p>Diagnóstico completo, análise do cenário eleitoral, plano de comunicação digital e metodologia ágil para colocar a estratégia em ação.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+        </div>
+        <div style="text-align:center; margin-top:32px;">
+          <a href="/monitoramento-de-campanha-eleitoral-online" class="btn btn-outline-azul">Monitoramento de Campanha Eleitoral Online →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFORMIDADE TSE -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Tráfego pago eleitoral: Meta Ads, YouTube e Google para candidatos</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Conformidade com as <span>normas do TSE</span></h2>
+        </div>
+        <div class="cards-grid" style="--grid-cols:2;">
+          <div class="card">
+            <h3>Durante a Pré-Campanha</h3>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Construção de imagem e reconhecimento de nome</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>YouTube Ads com mídia programática em vídeo</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Meta Ads para crescimento de seguidores</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Site do candidato como central digital</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Base eleitoral e captação de voluntários</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Durante a Campanha Oficial</h3>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Meta Ads focado em conversões e engajamento</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Landing Pages para mobilização de eleitores</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Financiamento coletivo ativo (dentro das normas TSE)</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Monitoramento diário de métricas e adversários</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Relatórios diários para a coordenação da campanha</li>
+            </ul>
+          </div>
+        </div>
+        <p style="text-align:center; margin-top:24px; font-size:13px; color:#999;">Todos os serviços são executados em conformidade com a legislação eleitoral brasileira e as diretrizes do Tribunal Superior Eleitoral (TSE). A prestação de contas segue as recomendações legais vigentes.</p>
+      </div>
+    </section>
+
+    <!-- CTA INTERMEDIÁRIO -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Gestão de anúncios eleitorais dentro das normas do TSE</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Sua campanha começa <span>agora</span></h2>
+          <p class="section-sub">Não espere a correria da campanha oficial. Quem começa a construir presença digital antes vence com mais facilidade.</p>
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Marketing%20Pol%C3%ADtico%20Digital" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Falar com Especialista pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que a Élefef?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Diferenciais que fazem <span>sua campanha crescer</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Conformidade com o TSE</h3><p>Todos os investimentos em mídia são rastreáveis e documentados conforme as exigências da prestação de contas eleitoral.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Relatórios diários</h3><p>Relatórios diários do desempenho das campanhas para que a coordenação tome decisões em tempo real.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Nota fiscal em tudo</h3><p>Todos os serviços emitidos com nota fiscal, facilitando a prestação de contas eleitoral.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Transparência total</h3><p>O investimento em mídia é pago diretamente pelo candidato ou pelo partido à plataforma. Nada passa pela Élefef.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Atendimento prioritário</h3><p>Em período de campanha, o atendimento é prioritário com suporte estendido para demandas urgentes.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Atendimento por WhatsApp</h3><p>Suporte direto via WhatsApp para a coordenação da campanha durante o período eleitoral.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">FAQ</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Perguntas frequentes sobre <span>marketing político digital</span></h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">É permitido anunciar no Facebook e Instagram durante a campanha eleitoral?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Sim. O Meta Ads (Facebook e Instagram) permite anúncios eleitorais no Brasil seguindo um processo de verificação de identidade e declaração de financiador. Os gastos com anúncios devem ser declarados na prestação de contas ao TSE. A Élefef orienta todo esse processo e garante que tudo esteja conforme a legislação.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Qual a diferença entre pré-campanha e campanha oficial para o marketing digital?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Na pré-campanha (antes do início oficial do período eleitoral), o candidato pode fazer ações de marca pessoal, construção de presença digital e divulgação de posições, mas sem pedir voto explicitamente. Durante a campanha oficial, é permitido pedir votos e usar recursos do fundo eleitoral para anúncios pagos nas redes sociais.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Como é feita a prestação de contas dos gastos com anúncios digitais?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Os gastos com anúncios digitais devem ser declarados ao TSE na prestação de contas da campanha. A Élefef emite nota fiscal de todos os serviços de gestão e fornece relatórios detalhados dos valores investidos em cada plataforma. O pagamento da mídia vai diretamente do candidato/partido à plataforma, facilitando o rastreamento dos recursos.</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Comece sua campanha digital <span>antes da concorrência!</span></h2>
+        <p>Quem constrói presença digital antes do período eleitoral vence com estratégia e menos custo. Fale agora com a Élefef.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Marketing%20Pol%C3%ADtico%20Digital" class="btn btn-ciano btn-lg" target="_blank" rel="noopener">Falar com Especialista pelo WhatsApp</a>
+          <a href="/orcamento" class="btn btn-outline btn-lg">Solicitar Proposta</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

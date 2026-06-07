@@ -1,0 +1,181 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Soluções para E-commerce",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Gestão de tráfego pago para e-commerce: Google Shopping, Max Performance e Meta Ads. Consultoria, implantação, migração e SEO para lojas virtuais.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Tráfego Pago para E-commerce: Google Ads e Meta Ads para Lojas Virtuais – Agência Elefef"
+  description="Gestão de tráfego pago para e-commerce: Google Shopping, Max Performance e Meta Ads. Aumente o ROAS da sua loja virtual com campanhas otimizadas. São Paulo e Brasil."
+  canonical="https://elefef.com.br/ecommerce"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">E-commerce</p>
+        <h1>Gestão de Tráfego Pago para E-commerce: Mais Vendas com Google Ads e Meta Ads</h1>
+        <p>Do Google Shopping ao Max Performance e Meta Ads — campanhas integradas que aumentam o ROAS da sua loja virtual e transformam verba em faturamento.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUÇÕES COMPLETAS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Como aumentar as vendas do seu e-commerce com tráfego pago</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Soluções completas de <span>e-commerce</span></h2>
+          <p class="section-sub">Conheça todos os serviços que a Élefef oferece para fazer sua loja virtual crescer com segurança e resultado.</p>
+        </div>
+        <div class="cards-grid">
+          <a href="/consultoria-ecommerce" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <h3>Consultoria em E-commerce</h3>
+            <p>Diagnóstico completo do seu negócio digital — do ponto A ao ponto B com planejamento detalhado, prazos e custos reais.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/implantacao-ecommerce" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <h3>Implantação de E-commerce</h3>
+            <p>Criação da sua loja virtual do zero nas principais plataformas: NuvemShop, Shopify, Tray, VTEX e WooCommerce.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/migracao-plataforma-ecommerce" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+            <h3>Migração de Plataforma</h3>
+            <p>Migração segura sem perda de SEO, histórico de campanhas ou dados de clientes. Reconfiguração completa do Google Ads e Meta Ads.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/suporte-evolucao" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <h3>Suporte e Evolução</h3>
+            <p>Suporte técnico e melhorias contínuas na sua loja virtual. Atualizações, ajustes de layout, integrações e otimizações.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <a href="/seo-ecommerce" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <h3>SEO para E-commerce</h3>
+            <p>Otimização técnica e de conteúdo para que sua loja apareça organicamente no Google e reduza a dependência de tráfego pago.</p>
+            <span class="card-link">Saiba mais →</span>
+          </a>
+          <div class="card">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <h3>Gestão de Tráfego para E-commerce</h3>
+            <p>Google Shopping, Max Performance e Meta Ads integrados para maximizar o ROAS e escalar as vendas da sua loja.</p>
+            <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20sobre%20Tr%C3%A1fego%20Pago%20para%20E-commerce" class="card-link" target="_blank" rel="noopener">Solicitar orçamento →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCOPO -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Google Shopping, Max Performance e Meta Ads para lojas virtuais</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Escopo de trabalho em <span>gestão de tráfego para e-commerce</span></h2>
+        </div>
+        <table class="freq-table">
+          <thead><tr><th>Frequência</th><th>Atividades realizadas</th></tr></thead>
+          <tbody>
+            <tr><td>Setup inicial</td><td>Google Tag Manager · Google Analytics 4 (GA4) · Google Merchant Center · Google Search Console · Google Meu Negócio · Pixel do Meta · Configuração de eventos de conversão</td></tr>
+            <tr><td>Diariamente</td><td>Acompanhamento de saldos e consumos de investimento nas contas de anúncios</td></tr>
+            <tr><td>Semanalmente</td><td>Otimização de campanhas de Max Performance / Shopping · Otimização de campanhas de Pesquisa · Otimização de campanhas de Display · Otimização de campanhas de Vídeo · Gestão de feed de produtos (Merchant Center) · Entrega de relatório semanal automatizado</td></tr>
+            <tr><td>Mensalmente</td><td>Reunião de alinhamento e apresentação de métricas e ROAS · Emissão de boletos e encaminhamento de NFs das plataformas</td></tr>
+            <tr><td>Trimestralmente</td><td>Dashboards no Google Looker Studio com métricas de e-commerce · Relatório personalizado com análise de ROAS anterior e plano de mídia para o próximo período</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CTA INTERMEDIÁRIO -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que contratar uma agência especialista em e-commerce?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Pronto para aumentar o <span>ROAS da sua loja?</span></h2>
+          <p class="section-sub">Fale agora com um especialista da Élefef e receba uma análise gratuita das suas campanhas para e-commerce.</p>
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20sobre%20Tr%C3%A1fego%20Pago%20para%20E-commerce" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Falar com Especialista pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que a Élefef?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Diferenciais que fazem <span>você crescer com segurança</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Transparência total</h3><p>O investimento em mídia é pago por você diretamente ao Google ou Meta. Nenhum centavo passa pela conta da Élefef.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Sua conta é sua</h3><p>A conta de anúncios pertence ao cliente. Se quiser sair, leva todo o histórico e audiências consigo.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Foco em ROAS</h3><p>Nossa gestão é orientada ao Retorno sobre o Investimento em Anúncios. Cada real investido é acompanhado de perto.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Nota fiscal em tudo</h3><p>Todos os serviços são emitidos com nota fiscal. Transparência garantida do início ao fim.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Sem multa de rescisão</h3><p>Encerre o contrato com 30 dias de aviso por e-mail. Sem multa, sem burocracia.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Atendimento por WhatsApp</h3><p>Suporte ágil no horário comercial e reuniões mensais de alinhamento.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">FAQ</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Perguntas frequentes sobre <span>tráfego pago para e-commerce</span></h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">O que é ROAS e por que ele é importante?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">ROAS (Return on Ad Spend) é a métrica que mostra quanto você fatura para cada real investido em anúncios. Por exemplo, um ROAS de 5x significa que para cada R$ 1 investido, você faturou R$ 5. Na Élefef, acompanhamos o ROAS semanalmente e usamos esse indicador como bússola para otimizar as campanhas e escalar os resultados.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Minha loja precisa ter quantos produtos para anunciar no Google Shopping?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Não existe número mínimo. Lojas com poucos produtos (até 10) podem se beneficiar muito do Google Shopping, especialmente se os produtos têm boa margem e demanda. Para lojas com catálogos maiores, gerenciamos o feed de produtos no Merchant Center para garantir qualidade e performance máximos.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Qual plataforma de e-commerce funciona melhor com Google Ads?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">A Élefef tem experiência em NuvemShop, Shopify, Tray, VTEX e WooCommerce. Todas suportam integração com Google Merchant Center via feed de produtos. O mais importante é que a plataforma permita instalação de tags de rastreamento (GTM) e tenha boa velocidade de carregamento — fatores que influenciam diretamente a performance das campanhas.</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Sua loja virtual com <span>mais vendas a partir de agora!</span></h2>
+        <p>Fale agora com a Élefef e receba uma proposta personalizada para gestão de tráfego pago do seu e-commerce.</p>
+        <div class="cta-btns">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Gestão de Meta Ads",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Gestão profissional de Meta Ads (Facebook e Instagram). Campanhas de reconhecimento, consideração e conversão com relatórios semanais.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Gestão de Meta Ads: Facebook e Instagram para Empresas – Agência Elefef"
+  description="Gestão profissional de Meta Ads (Facebook e Instagram). Campanhas de reconhecimento, consideração e conversão com relatórios semanais. São Paulo e todo o Brasil."
+  canonical="https://elefef.com.br/meta-ads"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Gestão de Tráfego</p>
+        <h1>Gestão de Tráfego Pago no Meta Ads: Mais Clientes pelo Facebook e Instagram</h1>
+        <p>Anúncios estratégicos no Facebook e Instagram que geram reconhecimento de marca, engajamento e conversões reais para o seu negócio.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-img">
+            <img src="/img/facebook-instagram-para-negocios-locais.png" alt="Gestão Meta Ads Facebook Instagram" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <span class="section-tag">Anúncios no Facebook e Instagram que geram resultado real</span>
+            <div class="divider left"></div>
+            <h2>Sua empresa parada enquanto concorrentes crescem nas redes?</h2>
+            <p>Facebook e Instagram reúnem mais de 130 milhões de usuários ativos no Brasil. Sem uma estratégia clara de anúncios, sua verba se perde em publicações impulsionadas sem retorno.</p>
+            <p>Na Élefef, estruturamos funis completos de campanhas — do reconhecimento à conversão — com criativos testados, segmentação precisa e otimização contínua baseada em dados.</p>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Campanhas de Reconhecimento — alcance, visualizações e lembrança de marca</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Campanhas de Consideração — tráfego, engajamento e geração de leads</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Campanhas de Conversão — vendas, cadastros e mensagens no WhatsApp</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Segmentação por interesses, comportamentos e públicos personalizados</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Criação de Lookalike Audiences para escalar os melhores resultados</li>
+            </ul>
+            <a href="/orcamento" class="btn btn-primary">Quero crescer no Facebook e Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCOPO -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Como funciona nossa gestão de Meta Ads</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Escopo de trabalho <span>detalhado</span></h2>
+          <p class="section-sub">Uma rotina profissional de gestão que mantém suas campanhas sempre otimizadas e seus resultados crescendo.</p>
+        </div>
+        <table class="freq-table">
+          <thead><tr><th>Frequência</th><th>Atividades realizadas</th></tr></thead>
+          <tbody>
+            <tr><td>Diariamente</td><td>Acompanhamento de saldos e valores investidos na conta de anúncios da Meta</td></tr>
+            <tr><td>Semanalmente</td><td>Otimização de campanhas de Reconhecimento · Otimização de campanhas de Consideração · Otimização de campanhas de Conversões · Entrega de relatório semanal automatizado</td></tr>
+            <tr><td>Mensalmente</td><td>Entrega de relatório mensal automatizado · Reunião de apresentação de métricas e resultados do mês anterior · Emissão de boletos e encaminhamento de NFs das plataformas</td></tr>
+            <tr><td>Trimestralmente</td><td>Criação de Dashboards para monitoramento de KPIs · Relatório personalizado na plataforma da Meta com análise do período anterior · Proposta de plano de mídia para o próximo trimestre</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CTA INTERMEDIÁRIO -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Resultados comprovados com campanhas no Facebook e Instagram Ads</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Pronto para escalar seus <span>resultados?</span></h2>
+          <p class="section-sub">Fale com um especialista Élefef agora e receba uma análise gratuita das suas campanhas no Meta Ads.</p>
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20sobre%20Gest%C3%A3o%20de%20Tr%C3%A1fego%20Meta%20Ads" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Falar com Especialista pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que a Élefef?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Diferenciais que fazem <span>você crescer com segurança</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Transparência total</h3><p>O investimento em mídia é pago por você diretamente ao Meta. Nenhum centavo passa pela conta da Élefef.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Sua conta é sua</h3><p>A conta do Meta Ads pertence ao cliente. Se quiser sair, leva todo o histórico de campanhas e audiências consigo.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Relatórios automatizados</h3><p>Relatórios semanais e mensais automatizados. Você sempre sabe o que está acontecendo com sua verba.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Nota fiscal em tudo</h3><p>Todos os serviços são emitidos com nota fiscal. Transparência e segurança jurídica garantidas.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Sem multa de rescisão</h3><p>Encerre o contrato a qualquer momento com 30 dias de aviso por e-mail. Sem multa, sem burocracia.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Atendimento por WhatsApp</h3><p>Suporte no horário comercial via WhatsApp. Reuniões mensais e resposta ágil para dúvidas e demandas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">FAQ</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Perguntas frequentes sobre <span>Meta Ads</span></h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">Qual a diferença entre impulsionar publicações e fazer gestão de Meta Ads?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Impulsionar publicações é uma ferramenta básica do Facebook/Instagram com objetivos limitados e segmentação superficial. A gestão profissional de Meta Ads usa o Gerenciador de Anúncios completo, com campanhas estruturadas em campanha-conjunto-anúncio, objetivos específicos por etapa do funil, segmentações avançadas, criativos testados e otimização baseada em dados reais de conversão.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Preciso ter Pixel do Meta instalado antes de contratar?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Não é obrigatório, mas é altamente recomendado para campanhas de conversão. Se você ainda não tem o Pixel instalado, a Élefef auxilia na instalação e configuração dos eventos de conversão no início do projeto.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">A agência cria os criativos (imagens e vídeos) dos anúncios?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">A Élefef é especialista em gestão de tráfego pago. Para a criação de artes e vídeos, trabalhamos em parceria com equipes criativas ou com materiais fornecidos pelo próprio cliente. Indicamos as melhores práticas de criativo para cada tipo de campanha e objetivo.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Como funciona o pagamento da verba de mídia?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">O investimento em mídia é pago diretamente por você ao Meta, via PIX ou cartão de crédito na plataforma. A Élefef cobra apenas a taxa de gestão, separadamente. Isso garante total transparência sobre o que é verba e o que é honorário da agência.</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Sua empresa merece estar <span>onde seu cliente está!</span></h2>
+        <p>Entre em contato agora e receba uma proposta personalizada para gestão de Meta Ads. Sem compromisso.</p>
+        <div class="cta-btns">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

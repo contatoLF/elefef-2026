@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Gestão de Tráfego Pago",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Gestão profissional de tráfego pago no Google Ads, Meta Ads, TikTok Ads, Shopee Ads, Amazon Ads e Globo Ads.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Gestão de Tráfego Pago – Agência Elefef"
+  description="Gestão profissional de tráfego pago no Google Ads, Meta Ads, TikTok Ads, Shopee Ads, Amazon Ads e Globo Ads. Pare de queimar dinheiro com anúncios que não convertem."
+  canonical="https://elefef.com.br/gestao-de-trafego"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Tráfego Pago</p>
+        <h1>Pare de queimar dinheiro com anúncios que não convertem!</h1>
+        <p>Gerenciamos suas campanhas nas principais plataformas com estratégia, otimização contínua e relatórios detalhados.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATAFORMAS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Nossas Plataformas</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Onde fazemos <span>sua marca aparecer</span></h2>
+          <p class="section-sub">Trabalhamos com as principais plataformas de anúncios do mercado para garantir que seu negócio esteja presente onde seu cliente está.</p>
+        </div>
+        <div class="cards-grid">
+          <a href="/google-ads" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <h3>Google Ads</h3>
+            <p>Search, Display, Shopping, YouTube e Max Performance. Capture clientes no momento da intenção de compra.</p>
+          </a>
+          <a href="/meta-ads" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+            <h3>Meta Ads</h3>
+            <p>Facebook e Instagram Ads. Conecte-se com seu público onde ele passa mais tempo com segmentação precisa.</p>
+          </a>
+          <a href="/tiktok-ads" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></div>
+            <h3>TikTok Ads</h3>
+            <p>Alcance a geração Z e millennials com anúncios criativos e de alto engajamento na plataforma que mais cresce.</p>
+          </a>
+          <a href="/shopee-ads" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+            <h3>Shopee Ads</h3>
+            <p>Anúncios de Busca, Descoberta e Display dentro do maior marketplace do Sudeste Asiático e Brasil.</p>
+          </a>
+          <a href="/globo-ads" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <h3>Globo Ads</h3>
+            <p>25 milhões de usuários mensais. Alcance inigualável para quem deseja atingir um público amplo e qualificado.</p>
+          </a>
+          <a href="/amazon-ads" class="card" style="text-decoration:none;">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <h3>Amazon Ads</h3>
+            <p>Sponsored Products, Brands e Display. Apareça para quem já está pronto para comprar no maior e-commerce do mundo.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARA QUEM -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-img">
+            <img src="/img/Gestao-de-trafego-para-negocios-locais.png" alt="Para quem é a gestão de tráfego" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <span class="section-tag">Para quem é</span>
+            <div class="divider left"></div>
+            <h2>Gestão de tráfego pago para cada tipo de negócio</h2>
+            <p>Seja qual for o seu negócio, temos a estratégia certa para atrair mais clientes qualificados e gerar mais vendas.</p>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><strong>E-commerces</strong> — Google Shopping, Meta e Marketplace Ads</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Negócios locais</strong> — Campanhas geolocalizadas por raio de 1 a 20km</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Infoprodutos</strong> — Funis de vendas e campanhas de conversão</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><strong>SaaS e serviços</strong> — Campanhas de geração de leads e branding</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><strong>Marketplaces</strong> — Shopee Ads e Amazon Ads com otimização de ACOS</li>
+            </ul>
+            <a href="/orcamento" class="btn btn-primary">Quero gestão profissional</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Como Trabalhamos</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Nosso <span>Processo</span></h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <h3>Diagnóstico</h3>
+            <p>Analisamos sua conta atual, concorrência, público e histórico de performance.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <h3>Planejamento</h3>
+            <p>Criamos uma estratégia personalizada com metas, plataformas e budget definidos.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <h3>Execução</h3>
+            <p>Subimos as campanhas com estrutura profissional, criativos e configurações corretas.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <h3>Otimização</h3>
+            <p>Monitoramento diário, ajustes semanais e relatórios mensais com ROI real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Pronto para <span>parar de perder dinheiro?</span></h2>
+        <p>Receba uma análise gratuita da sua conta de anúncios e descubra quanto está sendo desperdiçado.</p>
+        <div class="cta-btns">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Análise Gratuita</a>
+          <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20uma%20an%C3%A1lise%20gratuita" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

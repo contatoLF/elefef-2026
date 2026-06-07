@@ -1,0 +1,131 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Suporte e Evolução de E-commerce",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Mantenha seu e-commerce sempre atualizado, seguro e evoluindo. Suporte especializado para NuvemShop, Loja Integrada, Tray e Shopify.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Suporte e Evolução de E-commerce – Agência Elefef"
+  description="Mantenha seu e-commerce sempre atualizado, seguro e evoluindo. Suporte especializado para NuvemShop, Loja Integrada, Tray e Shopify."
+  canonical="https://elefef.com.br/suporte-evolucao"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Soluções E-commerce</p>
+        <h1>Suporte e Evolução de E-commerce</h1>
+        <p>Mantenha sua loja sempre atualizada, segura e em constante evolução. Foque no seu negócio, nós cuidamos da tecnologia.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPORTE ESPECIALIZADO -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-content">
+            <span class="section-tag">Suporte especializado</span>
+            <div class="divider left"></div>
+            <h2>Sua loja nunca para de evoluir</h2>
+            <p>Um e-commerce bem-sucedido não é estático. Precisa de atualizações constantes, melhorias de performance, novos recursos e correções rápidas quando algo sai do esperado.</p>
+            <p>Oferecemos um serviço de suporte e evolução contínua para manter sua loja sempre na melhor versão possível.</p>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Atualizações de plataforma e plugins</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Correção de erros e bugs</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Novas funcionalidades e integrações</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Otimização de velocidade e performance</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Suporte prioritário via WhatsApp</li>
+            </ul>
+            <a href="/orcamento" class="btn btn-primary">Contratar suporte</a>
+          </div>
+          <div class="feature-img">
+            <img src="/img/consultor-em-ecommerce.png" alt="Suporte e Evolução E-commerce" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLATAFORMAS -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Plataformas</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Damos suporte para as <span>principais plataformas</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card text-center">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+            <h3>NuvemShop</h3>
+            <p>Suporte completo para lojas na NuvemShop, incluindo apps, temas e integrações.</p>
+          </div>
+          <div class="card text-center">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <h3>Loja Integrada</h3>
+            <p>Manutenção e evolução de lojas na Loja Integrada com suporte a ERPs e marketplaces.</p>
+          </div>
+          <div class="card text-center">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <h3>Shopify</h3>
+            <p>Customizações Liquid, apps Shopify e integrações para escalar sua loja global.</p>
+          </div>
+          <div class="card text-center">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <h3>Tray Commerce</h3>
+            <p>Evolução técnica para lojas Tray com APIs, integrações e recursos avançados.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que a Élefef?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Diferenciais que fazem <span>você crescer com segurança</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Transparência total</h3><p>Você acompanha cada atividade realizada com relatórios claros e comunicação constante.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Sua loja é sua</h3><p>Todo o acesso e dados da loja permanecem com o cliente. Sem dependência de acesso da agência.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Suporte rápido</h3><p>Atendimento prioritário via WhatsApp no horário comercial para resolver problemas com agilidade.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Nota fiscal em tudo</h3><p>Todos os serviços são emitidos com nota fiscal. Transparência e segurança jurídica garantidas.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Sem multa de rescisão</h3><p>Encerre o contrato com 30 dias de aviso por e-mail. Sem multa, sem burocracia.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Atendimento por WhatsApp</h3><p>Suporte no horário comercial via WhatsApp. Reuniões mensais e resposta ágil para dúvidas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Sua loja merece <span>suporte profissional.</span></h2>
+        <p>Não deixe bugs e desatualizações afetarem suas vendas. Entre em contato e receba um orçamento personalizado.</p>
+        <div class="cta-btns">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

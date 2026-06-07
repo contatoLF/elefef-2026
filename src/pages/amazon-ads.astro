@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Gestão de Amazon Ads",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Gestão estratégica de Amazon Ads. Sponsored Products, Sponsored Brands e Sponsored Display. Reduza o ACOS e aumente sua visibilidade no maior e-commerce do mundo.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Amazon Ads – Gestão de Anúncios na Amazon – Agência Elefef"
+  description="Gestão estratégica de Amazon Ads. Sponsored Products, Sponsored Brands e Sponsored Display. Reduza o ACOS e aumente sua visibilidade no maior e-commerce do mundo."
+  canonical="https://elefef.com.br/amazon-ads"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Amazon Ads</p>
+        <h1>Gestão Estratégica de Amazon Ads</h1>
+        <p>Aumente a visibilidade e impulsione suas vendas com gestão profissional de Amazon Ads. Reduza o ACOS e maximize seu retorno.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-img">
+            <img src="/img/amazon-ads-gestao-trafego.png" alt="Amazon Ads" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <span class="section-tag">Amazon Ads</span>
+            <div class="divider left"></div>
+            <h2>Venda mais no maior e-commerce do mundo</h2>
+            <p>A Amazon é o maior marketplace do mundo e um dos principais canais de busca de produtos. Quem não anuncia estrategicamente perde visibilidade para concorrentes que investem em Amazon Ads.</p>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Gestão estratégica de Sponsored Products</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Sponsored Brands para destacar sua marca</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Sponsored Display para remarketing</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Otimização contínua de ACOS</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Relatórios detalhados de performance</li>
+            </ul>
+            <a href="/orcamento" class="btn btn-primary">Quero Amazon Ads</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATOS -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Tipos de Campanha</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Formatos de <span>Amazon Ads</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+            <h3>Sponsored Products</h3>
+            <p>Apareça no topo dos resultados de busca da Amazon quando alguém procura pelo seu produto. O formato mais usado e eficiente para gerar vendas diretas.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <h3>Sponsored Brands</h3>
+            <p>Destaque sua marca com banners de topo de página que exibem seu logotipo, headline personalizada e múltiplos produtos. Ideal para brand awareness.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+            <h3>Sponsored Display</h3>
+            <p>Remarketing dentro e fora da Amazon. Alcance compradores que visitaram sua página de produto mas não finalizaram a compra.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Processo</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Como gerenciamos <span>suas campanhas na Amazon</span></h2>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item"><div class="step-num">1</div><h3>Auditoria</h3><p>Analisamos sua conta atual, histórico de campanhas, ACOS médio e oportunidades de melhoria.</p></div>
+          <div class="step-item"><div class="step-num">2</div><h3>Estratégia</h3><p>Definimos as campanhas, tipos de correspondência de palavras-chave, lances e orçamento ideal.</p></div>
+          <div class="step-item"><div class="step-num">3</div><h3>Execução</h3><p>Subimos as campanhas com estrutura profissional e acompanhamento diário de performance.</p></div>
+          <div class="step-item"><div class="step-num">4</div><h3>Relatórios</h3><p>Relatórios mensais detalhados com ACOS, ROAS, conversões e plano de evolução das campanhas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que a Élefef?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Diferenciais que fazem <span>você crescer com segurança</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Transparência total</h3><p>O investimento em mídia é pago por você diretamente à Amazon. Nenhum centavo passa pela conta da Élefef.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Sua conta é sua</h3><p>A conta do Amazon Ads pertence ao cliente. Todo o histórico e dados ficam com você, sempre.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Foco em ACOS e ROAS</h3><p>Nossa gestão é orientada a reduzir o ACOS e maximizar o ROAS de cada campanha na Amazon.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Nota fiscal em tudo</h3><p>Todos os serviços são emitidos com nota fiscal. Transparência e segurança jurídica garantidas.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Sem multa de rescisão</h3><p>Encerre o contrato com 30 dias de aviso por e-mail. Sem multa, sem burocracia.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Atendimento por WhatsApp</h3><p>Suporte ágil no horário comercial via WhatsApp e reuniões mensais de alinhamento.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Venda mais na Amazon com <span>gestão profissional.</span></h2>
+        <p>Receba uma análise gratuita da sua conta Amazon e descubra como reduzir seu ACOS e aumentar as vendas.</p>
+        <div class="cta-btns">
+          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
+          <a href="/#contato" class="btn btn-outline btn-lg">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>

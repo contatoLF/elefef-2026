@@ -1,0 +1,180 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Solicite um Orçamento — Agência Elefef",
+  "url": "https://elefef.com.br/orcamento",
+  "description": "Entre em contato com a Agência Elefef para solicitar um orçamento de gestão de tráfego pago ou soluções de e-commerce.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+55-11-94063-5670",
+    "contactType": "customer service",
+    "areaServed": "BR",
+    "availableLanguage": "Portuguese"
+  }
+};
+---
+<BaseLayout
+  title="Solicite um Orçamento – Agência Elefef"
+  description="Entre em contato com a Agência Elefef para solicitar um orçamento de gestão de tráfego pago ou soluções de e-commerce. WhatsApp: +55 11 94063-5670."
+  canonical="https://elefef.com.br/orcamento"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero" style="padding:120px 0 80px;">
+      <div class="container" style="text-align:center;">
+        <p class="section-tag light">Contato</p>
+        <h1>Solicite um Orçamento</h1>
+        <p style="max-width:580px;margin:0 auto;">Nos conte sobre o seu negócio e entraremos em contato rapidamente para apresentar a melhor solução.</p>
+      </div>
+    </section>
+
+    <!-- CANAIS DE CONTATO -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Fale Conosco</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Escolha a forma de <span>contato preferida</span></h2>
+        </div>
+        <div class="cards-grid" style="max-width:960px;margin:0 auto;">
+          <div class="card" style="text-align:center;">
+            <div class="card-icon" style="background:#dcfce7;border-radius:50%;width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="#16a34a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <h3>WhatsApp / Telegram</h3>
+            <p>A forma mais rápida de falar com a gente. Respondemos em minutos durante o horário comercial.</p>
+            <p style="font-size:20px;font-weight:700;color:#16a34a;margin-bottom:20px;">+55 11 94063-5670</p>
+            <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento" class="btn btn-primary" target="_blank" rel="noopener">Enviar mensagem</a>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="card-icon" style="background:#dbeafe;border-radius:50%;width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.11 12 19.79 19.79 0 012.04 3.37 2 2 0 014 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91A16 16 0 0014 15.83l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <h3>Agendar Reunião</h3>
+            <p>Prefere uma conversa mais detalhada? Agende uma reunião online para apresentarmos nossa proposta completa.</p>
+            <p style="font-size:14px;color:#666;margin-bottom:20px;">Reuniões por Zoom, Google Meet ou WhatsApp</p>
+            <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o%20online" class="btn btn-outline" target="_blank" rel="noopener">Agendar reunião</a>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="card-icon" style="background:#fef9c3;border-radius:50%;width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#854d0e" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3>E-mail</h3>
+            <p>Envie suas dúvidas ou solicite informações detalhadas por e-mail. Respondemos em até 24 horas úteis.</p>
+            <p style="font-size:16px;font-weight:600;color:#854d0e;margin-bottom:20px;">contato@elefef.com.br</p>
+            <a href="mailto:contato@elefef.com.br?subject=Or%C3%A7amento%20Elefef" class="btn btn-outline">Enviar e-mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-tag">Formulário de Contato</span>
+            <div class="divider left"></div>
+            <h2>Conte-nos sobre seu projeto</h2>
+            <p>Preencha o formulário ao lado com os dados do seu negócio e o serviço desejado. Nossa equipe entrará em contato em até 1 dia útil.</p>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div><strong>São Paulo – SP</strong><span>Atendimento remoto para todo o Brasil</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.11 12 19.79 19.79 0 012.04 3.37 2 2 0 014 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91A16 16 0 0014 15.83l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+              <div><strong>+55 11 94063-5670</strong><span>WhatsApp e Telegram</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><strong>contato@elefef.com.br</strong><span>Resposta em até 24h úteis</span></div>
+            </div>
+            <div style="margin-top:28px;">
+              <p style="font-size:14px;font-weight:600;color:#333;margin-bottom:12px;">Serviços disponíveis:</p>
+              <ul class="feature-list">
+                <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Google Ads para E-commerce</li>
+                <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Meta Ads para E-commerce</li>
+                <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Tráfego Local para Empresas</li>
+                <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Shopee Ads ou Amazon Ads</li>
+                <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Implantação de E-commerce</li>
+                <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>SEO para E-commerce</li>
+                <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Consultoria em E-commerce</li>
+              </ul>
+            </div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--borda);border-radius:16px;padding:40px;">
+            <h3 style="font-size:20px;margin-bottom:24px;">Solicite seu orçamento</h3>
+            <form id="orcamento-form">
+              <div style="margin-bottom:20px;">
+                <label for="nome" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Nome completo *</label>
+                <input type="text" id="nome" placeholder="Seu nome" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+              </div>
+              <div style="margin-bottom:20px;">
+                <label for="empresa" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Nome da empresa</label>
+                <input type="text" id="empresa" placeholder="Nome da empresa ou site" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+              </div>
+              <div style="margin-bottom:20px;">
+                <label for="tel" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">WhatsApp / Telefone *</label>
+                <input type="tel" id="tel" placeholder="(11) 9 0000-0000" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+              </div>
+              <div style="margin-bottom:20px;">
+                <label for="servico" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Serviço de interesse</label>
+                <select id="servico" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+                  <option value="">Selecione um serviço</option>
+                  <option>Google Ads para E-commerce</option>
+                  <option>Meta Ads para E-commerce</option>
+                  <option>Tráfego Local para Empresas</option>
+                  <option>Shopee Ads</option>
+                  <option>Amazon Ads</option>
+                  <option>Implantação de E-commerce</option>
+                  <option>SEO para E-commerce</option>
+                  <option>Consultoria em E-commerce</option>
+                  <option>Gestão de E-commerce</option>
+                  <option>Marketing Político Eleitoral</option>
+                  <option>Mais de um serviço</option>
+                </select>
+              </div>
+              <div style="margin-bottom:20px;">
+                <label for="mensagem" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Conte um pouco sobre seu negócio</label>
+                <textarea id="mensagem" placeholder="Ex: Tenho uma loja de roupas com faturamento mensal de R$ 30k e quero aumentar as vendas..." style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;min-height:120px;resize:vertical;box-sizing:border-box;"></textarea>
+              </div>
+              <button type="button" onclick="enviarWhatsApp()" class="btn btn-primary btn-lg" style="width:100%;text-align:center;">
+                Enviar via WhatsApp
+              </button>
+              <p style="font-size:12px;color:#999;margin-top:12px;text-align:center;">Ao enviar, você será redirecionado para o WhatsApp da Elefef.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>
+
+<script>
+function enviarWhatsApp() {
+  const nome = (document.getElementById('nome') as HTMLInputElement).value || 'Visitante';
+  const empresa = (document.getElementById('empresa') as HTMLInputElement).value;
+  const tel = (document.getElementById('tel') as HTMLInputElement).value;
+  const servico = (document.getElementById('servico') as HTMLSelectElement).value;
+  const msg = (document.getElementById('mensagem') as HTMLTextAreaElement).value;
+  let texto = `Olá! Sou *${nome}*`;
+  if (empresa) texto += ` da empresa *${empresa}*`;
+  texto += '.\n\nVim pelo site e gostaria de solicitar um orçamento.';
+  if (servico) texto += `\n\n*Serviço:* ${servico}`;
+  if (tel) texto += `\n*Contato:* ${tel}`;
+  if (msg) texto += `\n\n*Sobre o meu negócio:*\n${msg}`;
+  window.open(`https://api.whatsapp.com/send?phone=5511940635670&text=${encodeURIComponent(texto)}`, '_blank');
+}
+</script>

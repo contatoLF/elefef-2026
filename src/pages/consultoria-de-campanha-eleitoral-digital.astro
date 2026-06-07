@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Consultoria de Campanha Eleitoral Digital",
+  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
+  "description": "Consultoria de campanha eleitoral digital: diagnóstico, plano de comunicação, metodologia ágil e estratégia completa para candidatos. Dentro das normas do TSE.",
+  "areaServed": { "@type": "Country", "name": "Brasil" }
+};
+---
+<BaseLayout
+  title="Consultoria de Campanha Eleitoral Digital: Planejamento e Estratégia para Candidatos – Agência Elefef"
+  description="Consultoria de campanha eleitoral digital: diagnóstico, plano de comunicação, metodologia ágil e estratégia completa para candidatos. Dentro das normas do TSE. Solicite orçamento."
+  canonical="https://elefef.com.br/consultoria-de-campanha-eleitoral-digital"
+  schema={schema}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Marketing Político</p>
+        <h1>Consultoria de Campanha Eleitoral Digital: Estratégia Completa para Candidatos que Querem Vencer</h1>
+        <p>Diagnóstico completo, análise do cenário eleitoral, plano de comunicação digital e metodologia ágil (Scrum/Kanban) para colocar a estratégia em ação. Uma campanha digital vencedora começa com planejamento.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20sobre%20Consultoria%20de%20Campanha%20Eleitoral%20Digital" class="btn btn-ciano btn-lg" target="_blank" rel="noopener">Solicitar Orçamento pelo WhatsApp</a>
+          <a href="/marketing-politico" class="btn btn-outline btn-lg">Ver Todos os Serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUE A CONSULTORIA -->
+    <section class="section">
+      <div class="container">
+        <div class="feature-grid">
+          <div class="feature-img">
+            <img src="/img/consultoria-em-ecommerce-.png" alt="Consultoria de campanha eleitoral digital" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <span class="section-tag">Por que toda campanha digital precisa de consultoria estratégica antes de sair anunciando</span>
+            <div class="divider left"></div>
+            <h2>Campanhas sem estratégia gastam o dobro para conseguir metade do resultado</h2>
+            <p>Anunciar sem planejamento é desperdiçar dinheiro. Candidatos que investem em consultoria antes de veicular qualquer anúncio chegam ao período de campanha com mensagem clara, público-alvo definido, orçamento alocado de forma inteligente e equipe alinhada.</p>
+            <p>A Élefef usa metodologia ágil (Scrum e Kanban) para organizar a campanha digital em sprints semanais, garantindo execução ágil e capacidade de adaptação rápida conforme o cenário eleitoral evolui.</p>
+            <ul class="feature-list">
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Análise do cenário eleitoral e mapeamento dos adversários</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Definição de persona do eleitor e segmentos prioritários</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Plano de comunicação digital por fase (pré-campanha e campanha)</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Cronograma de ações com metodologia Scrum/Kanban</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Orçamento de mídia recomendado por canal e fase</li>
+              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>KPIs e métricas de acompanhamento para cada objetivo</li>
+            </ul>
+            <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20sobre%20Consultoria%20de%20Campanha%20Eleitoral%20Digital" class="btn btn-primary" target="_blank" rel="noopener">Quero minha consultoria eleitoral</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESCOPO -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Diagnóstico, plano de campanha e metodologia ágil para candidatos</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Escopo da <span>consultoria de campanha eleitoral digital</span></h2>
+        </div>
+        <table class="freq-table">
+          <thead><tr><th>Fase</th><th>Entregáveis</th></tr></thead>
+          <tbody>
+            <tr><td>Diagnóstico</td><td>Análise do cenário eleitoral local · Benchmarking da presença digital do candidato vs. adversários · Análise de redes sociais e engajamento atual · Identificação de oportunidades e ameaças digitais</td></tr>
+            <tr><td>Planejamento</td><td>Definição de personas eleitorais · Posicionamento digital do candidato · Plano de comunicação por fase (pré-campanha e campanha oficial) · Plano de mídia com orçamento recomendado por canal · Cronograma de ações em formato Kanban</td></tr>
+            <tr><td>Execução (Sprints)</td><td>Reunião semanal de alinhamento (sprint planning) · Revisão semanal de métricas e ajuste de estratégia · Gestão das tarefas digitais em board Kanban · Relatório semanal para a coordenação</td></tr>
+            <tr><td>Análise e otimização</td><td>Análise mensal de resultados vs. metas · Revisão da estratégia e replanejamento para o próximo período · Relatório final com resultados e lições aprendidas</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CTA INTERMEDIÁRIO -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Planejamento de campanha eleitoral digital com metodologia ágil</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Pronto para planejar sua campanha <span>com estratégia?</span></h2>
+          <p class="section-sub">Fale agora com a Élefef e receba uma proposta para consultoria de campanha eleitoral digital com metodologia ágil.</p>
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20sobre%20Consultoria%20de%20Campanha%20Eleitoral%20Digital" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Falar com Especialista pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Por que a Élefef?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Diferenciais que fazem <span>sua campanha crescer</span></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3>Metodologia Ágil</h3><p>Sprints semanais com Scrum e Kanban para execução organizada e capacidade de adaptação em tempo real.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>KPIs definidos</h3><p>Métricas claras para cada objetivo da campanha — do alcance ao cadastro de voluntários.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Conformidade com o TSE</h3><p>Plano de campanha desenvolvido dentro das normas eleitorais e da legislação vigente.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Nota fiscal em tudo</h3><p>Todos os serviços emitidos com NF — essencial para a prestação de contas eleitoral.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Visão integrada</h3><p>Consultoria que integra todos os canais: Meta Ads, YouTube, site, landing pages e financiamento coletivo.</p></div>
+          <div class="card"><div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Atendimento por WhatsApp</h3><p>Canal direto durante toda a consultoria para tirar dúvidas e alinhar decisões estratégicas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">FAQ</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Perguntas frequentes sobre <span>consultoria de campanha eleitoral digital</span></h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="faq-question">Quando é o momento certo de contratar a consultoria de campanha digital?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Idealmente, a consultoria deve começar entre 6 e 12 meses antes da eleição — o que corresponde ao início da pré-campanha. Quanto mais cedo, mais tempo o candidato tem para construir presença digital, crescer nas redes sociais e fazer testes de mensagem antes de gastar com mídia paga. Iniciar a consultoria na véspera da campanha oficial reduz o impacto das ações.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Como funciona a metodologia ágil (Scrum/Kanban) em uma campanha política?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">Adaptamos as metodologias ágeis para a realidade de campanhas eleitorais. O trabalho é organizado em sprints de 1 semana: na segunda-feira definimos as prioridades da semana (sprint planning) e na sexta revisamos o que foi feito e ajustamos para a semana seguinte (sprint review). O Kanban organiza todas as tarefas pendentes, em execução e concluídas em um quadro visual acessível à coordenação.</div></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">A consultoria inclui a execução das ações ou apenas o planejamento?</summary>
+            <div class="faq-answer"><div class="faq-answer-inner">A consultoria pode ser contratada como planejamento puro ou como planejamento + execução. Na modalidade completa, a Élefef assume a execução de todos os canais digitais: gestão de Meta Ads, criação de site, landing pages, financiamento coletivo e monitoramento. Oferecemos as duas modalidades conforme a necessidade da campanha.</div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Campanha digital com <span>estratégia, método e resultado!</span></h2>
+        <p>Fale agora com a Élefef e garanta a consultoria de campanha eleitoral digital da sua candidatura.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/5511940635670?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20sobre%20Consultoria%20de%20Campanha%20Eleitoral%20Digital" class="btn btn-ciano btn-lg" target="_blank" rel="noopener">Solicitar Orçamento pelo WhatsApp</a>
+          <a href="/marketing-politico" class="btn btn-outline btn-lg">Ver Todos os Serviços</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>
