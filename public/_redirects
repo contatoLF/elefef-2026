@@ -31,3 +31,60 @@
 /monitoramento-de-campanha-eleitoral-online.html /monitoramento-de-campanha-eleitoral-online 301
 /orcamento.html         /orcamento      301
 /solucoes.html          /solucoes       301
+
+# ─────────────────────────────────────────────────────────────
+# Migração WordPress → Astro (elefef.com.br → novo site)
+# ─────────────────────────────────────────────────────────────
+
+# Páginas institucionais
+/home/                                                              /                               301
+/sobre/                                                             /quem-somos/                    301
+/sobre-nos/                                                         /quem-somos/                    301
+/servicos/                                                          /                               301
+/contato/                                                           /orcamento/                     301
+/agencia/                                                           /                               301
+/agencia/services/                                                  /                               301
+
+# Tráfego pago — Ads
+/agencia/shopee-ads/                                                /shopee-ads/                    301
+/agencia/google-ads-para-e-commerce/                                /google-ads/                    301
+/agencia/meta-ads-para-e-commerce/                                  /meta-ads/                      301
+/agencia/gestao-de-amazon-ads/                                      /amazon-ads/                    301
+/agencia/gestao-de-trafego/                                         /gestao-de-trafego/             301
+/agencia/gestao-de-trafego-para-e-commerce/                         /gestao-de-trafego/             301
+/agencia/gestao-de-trafego-local-para-empresas/                     /gestao-de-trafego/             301
+
+# E-commerce
+/agencia/gestao-de-e-commerce/                                      /ecommerce/                     301
+/agencia/consultoria-em-e-commerce/                                 /consultoria-ecommerce/         301
+/agencia/implantacao-de-e-commerce/                                 /implantacao-ecommerce/         301
+/agencia/migracao-de-plataforma-de-e-commerce/                      /migracao-plataforma-ecommerce/ 301
+/agencia/suporte-e-evolucao-de-e-commerce/                          /suporte-evolucao/              301
+/agencia/seo-para-e-commerce/                                       /seo-ecommerce/                 301
+
+# Marketing político
+/agencia/gestao-de-trafego-pago-para-eleicoes/                      /marketing-politico/            301
+/marketing-politico/criacao-de-conteudo-politico/                   /                               301
+
+# Páginas sem equivalente → home
+/agencia/mercado-ads/                                               /                               301
+/agencia/infoproduto/                                               /                               301
+/agencia/automacoes-e-crm/                                          /                               301
+/politica-de-privacidade/                                           /                               301
+/rdr/                                                               /                               301
+/rdr/radar-dmscs/                                                   /                               301
+/rdr/radar-prefeitos-de-santo-andre/                                /                               301
+/rdr/rdr-diadema/                                                   /                               301
+/rdr-dep-estadual/                                                  /                               301
+/teste/                                                             /                               301
+/elementor-pagina-3516/                                             /                               301
+
+# Posts do blog que estavam na raiz do WP → home
+/tudo-o-que-voce-precisa-saber-sobre-trafego-pago-para-alavancar-seu-negocio-local/ /              301
+/aumente-suas-vendas-na-sua-cidade-e-regiao-com-trafego-pago/                        /              301
+/nuvemshop-e-bom/                                                                    /              301
+/migracao-de-e-commerce-evite-os-7-maiores-medos-ao-escolher-uma-plataforma-de-e-commerce/ /       301
+/nuvemshop-planos/                                                                   /              301
+/jivochat-a-solucao-completa-de-chat-online/                                         /              301
+/jivochat-e-bom-descubra-as-vantagens-da-ferramenta-para-sua-empresa/                /              301
+/blog/jivo-chat-e-bom/                                                               /              301
