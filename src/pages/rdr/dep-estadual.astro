@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppFloat from '../../components/WhatsAppFloat.astro';
+---
+<BaseLayout
+  title="Relatório de Investimento em Anúncios — Deputado Estadual | Agência Élefef"
+  description="Acompanhe em tempo real o investimento em anúncios no Meta Ads para a campanha de Deputado Estadual gerenciada pela Agência Élefef."
+  canonical="https://elefef.com.br/rdr/dep-estadual"
+  noindex={true}
+>
+  <Header />
+
+  <div id="fb-root"></div>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0"></script>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="section-tag light">Relatório de Campanha</p>
+        <h1>Acompanhe o investimento na plataforma do Meta Ads</h1>
+      </div>
+    </section>
+
+    <!-- EMBEDS: ÚLTIMOS 90 DIAS + ÚLTIMOS 30 DIAS -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:40px;align-items:start;">
+          <div class="card" style="text-align:center;">
+            <h2 style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;color:#1a1a1a;margin-bottom:24px;">Últimos 90 dias</h2>
+            <div
+              class="fb-ad-library-spend-tracker"
+              data-country="BR"
+              data-page-ids="257401334462190,171011109641961,409733062460769,1733444883616399,695903437104290,251192765396768,893513937426012,1158512120831581,110596014636841,263154333861515"
+              data-time-preset="last_90_days"
+              data-width="500"
+            ></div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <h2 style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;color:#1a1a1a;margin-bottom:24px;">Últimos 30 dias</h2>
+            <div
+              class="fb-ad-library-spend-tracker"
+              data-country="BR"
+              data-page-ids="257401334462190,171011109641961,409733062460769,1733444883616399,695903437104290,251192765396768,893513937426012,1158512120831581,110596014636841,263154333861515"
+              data-time-preset="last_30_days"
+              data-width="500"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Gestão de Anúncios no Instagram e Facebook para <span>Marketing Político?</span></h2>
+        <p>Solicite um orçamento e fale agora com um especialista da Agência Élefef.</p>
+        <div class="cta-btns">
+          <a
+            href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
+            class="btn btn-ciano btn-lg"
+            target="_blank"
+            rel="noopener"
+          >Solicitar Orçamento pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMBEDS: ÚLTIMOS 7 DIAS + ONTEM -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:40px;align-items:start;">
+          <div class="card" style="text-align:center;">
+            <h2 style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;color:#1a1a1a;margin-bottom:24px;">Últimos 7 dias</h2>
+            <div
+              class="fb-ad-library-spend-tracker"
+              data-country="BR"
+              data-page-ids="257401334462190,171011109641961,409733062460769,1733444883616399,695903437104290,251192765396768,893513937426012,1158512120831581,110596014636841,263154333861515"
+              data-time-preset="last_7_days"
+              data-width="500"
+            ></div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <h2 style="font-family:'Poppins',sans-serif;font-size:22px;font-weight:600;color:#1a1a1a;margin-bottom:24px;">Ontem</h2>
+            <div
+              class="fb-ad-library-spend-tracker"
+              data-country="BR"
+              data-page-ids="257401334462190,171011109641961,409733062460769,1733444883616399,695903437104290,251192765396768,893513937426012,1158512120831581,110596014636841,263154333861515"
+              data-time-preset="yesterday"
+              data-width="500"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Especialistas em tráfego pago eleitoral</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Gostaria de fazer anúncios no Instagram e Facebook com <span>especialista em Marketing Político?</span></h2>
+          <p class="section-sub">Solicite um orçamento e agende uma reunião com a equipe da Agência Élefef.</p>
+          <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+            <a
+              href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento..."
+              class="btn btn-primary btn-lg"
+              target="_blank"
+              rel="noopener"
+            >Solicitar Orçamento</a>
+            <a
+              href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20reuni%C3%A3o..."
+              class="btn btn-outline-azul btn-lg"
+              target="_blank"
+              rel="noopener"
+            >Agendar Reunião</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+  <WhatsAppFloat />
+</BaseLayout>
