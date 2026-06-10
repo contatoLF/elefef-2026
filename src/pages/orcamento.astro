@@ -62,7 +62,7 @@ const schema = {
             <h3>Agendar Reunião</h3>
             <p>Prefere uma conversa mais detalhada? Agende uma reunião online para apresentarmos nossa proposta completa.</p>
             <p style="font-size:14px;color:#666;margin-bottom:20px;">Reuniões por Zoom, Google Meet ou WhatsApp</p>
-            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ26OVSaC3Wj8BBjx4Kyi_3huca82hVkME4HDNohzX53kWFc1EJ2sbNDVSHa8-nVmznITv0BbAxD" class="btn btn-outline" target="_blank" rel="noopener">Agendar reunião</a>
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ26OVSaC3Wj8BBjx4Kyi_3huca82hVkME4HDNohzX53kWFc1EJ2sbNDVSHa8-nVmznITv0BbAxD" class="btn btn-primary" target="_blank" rel="noopener">Agendar reunião</a>
           </div>
           <div class="card" style="text-align:center;">
             <div class="card-icon" style="background:#fef9c3;border-radius:50%;width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
@@ -71,7 +71,7 @@ const schema = {
             <h3>E-mail</h3>
             <p>Envie suas dúvidas ou solicite informações detalhadas por e-mail. Respondemos em até 24 horas úteis.</p>
             <p style="font-size:16px;font-weight:600;color:#854d0e;margin-bottom:20px;">contato@elefef.com.br</p>
-            <a href="mailto:contato@elefef.com.br?subject=Or%C3%A7amento%20Elefef" class="btn btn-outline">Enviar e-mail</a>
+            <a href="mailto:contato@elefef.com.br?subject=Or%C3%A7amento%20Elefef" class="btn btn-primary">Enviar e-mail</a>
           </div>
         </div>
       </div>
@@ -161,6 +161,39 @@ const schema = {
   <Footer />
   <WhatsAppFloat />
 </BaseLayout>
+
+<style>
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .contact-item-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: #f0f6ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-item-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-item strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  .contact-item span {
+    font-size: 13px;
+    color: #666;
+  }
+</style>
 
 <script>
 function enviarWhatsApp() {
