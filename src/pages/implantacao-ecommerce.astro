@@ -1,141 +1,694 @@
-﻿---
+---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Implantação de E-commerce",
-  "provider": { "@type": "Organization", "name": "Agência Elefef", "url": "https://elefef.com.br" },
-  "description": "Implantamos sua loja virtual em apenas 14 dias na NuvemShop, Loja Integrada, Shopify ou Tray. Briefing, design, integrações, cadastro de produtos e treinamento.",
-  "areaServed": { "@type": "Country", "name": "Brasil" }
-};
+const WA            = '5511940635670';
+const WA_HERO       = encodeURIComponent('Olá! Vim pelo site e quero um orçamento para implantação de e-commerce.');
+const WA_ESCOPO     = encodeURIComponent('Olá! Quero saber mais sobre o que está incluso na implantação de e-commerce.');
+const WA_PLATAFORMA = encodeURIComponent('Olá! Não sei qual plataforma escolher para minha loja. Podem me ajudar?');
+const WA_FAQ        = encodeURIComponent('Olá! Tenho dúvidas sobre a implantação de e-commerce. Podem me ajudar?');
+const WA_FINAL      = encodeURIComponent('Olá! Quero começar minha loja virtual. Vamos conversar?');
+
+const faqItems = [
+  {
+    q: 'Em quanto tempo minha loja fica pronta?',
+    a: 'A implantação de e-commerce da Elefef é entregue em até 14 dias corridos, contados após a reunião de análise de requisitos e o pagamento do sinal. Esse prazo cobre todas as etapas: briefing, configuração do tema, integrações de pagamento e frete, cadastro de produtos de teste e treinamento ao vivo.'
+  },
+  {
+    q: 'Quais plataformas vocês implantam?',
+    a: 'Trabalhamos com Nuvemshop (parceiro oficial), Loja Integrada, Shopify e Tray Commerce (parceiro oficial). Ajudamos você a escolher a plataforma ideal de acordo com o tamanho do negócio, orçamento e objetivos de crescimento.'
+  },
+  {
+    q: 'O que está incluso na implantação?',
+    a: 'A implantação inclui: instalação e configuração do tema, criação ou adaptação do logo, árvore de navegação (menu desktop e mobile), cadastro de categorias, até 12 produtos de teste, banners, e-mails transacionais, até 5 páginas institucionais, SEO on-page, integração com redes sociais, configuração de frete, gateway de pagamento, checkout, 5 pedidos de teste e treinamento remoto ao vivo.'
+  },
+  {
+    q: 'Preciso já ter os produtos cadastrados?',
+    a: 'Não. Fazemos o cadastro de até 12 produtos de teste durante a implantação, com título, descrição, fotos e SEO on-page. Para lojas com catálogo maior, a Elefef oferece serviço adicional de cadastro em massa.'
+  },
+  {
+    q: 'Vocês criam o logotipo?',
+    a: 'Sim. A implantação inclui criação ou adaptação profissional de logo. Se você já tem uma identidade visual, aplicamos ela à loja. Se não tem, criamos uma versão profissional dentro do escopo do projeto.'
+  },
+  {
+    q: 'A loja já sai otimizada para o Google (SEO)?',
+    a: 'Sim. Configuramos H1 customizável, title, meta description, sitemap automático e meta tags de loja, categorias e produtos. Também orientamos as melhores práticas de SEO durante o treinamento para que você continue a otimização após a entrega.'
+  },
+  {
+    q: 'Tenho suporte e treinamento depois da entrega?',
+    a: 'Sim. Incluímos treinamento remoto ao vivo via Google Meet cobrindo cadastro de produtos, categorias, banners, cupons, páginas e dicas de SEO. O acompanhamento do projeto é feito via Trello ou Notion para total transparência.'
+  },
+  {
+    q: 'Vocês configuram pagamento e frete?',
+    a: 'Sim. Configuramos os principais gateways de pagamento e o checkout da plataforma. Para frete, integramos com Correios e apps de logística como Frenet, Melhor Envio, Enviáli e Nuvem Envios, conforme sua necessidade.'
+  },
+  {
+    q: 'Trabalham com migração de outra plataforma?',
+    a: 'Sim. Se você já tem uma loja em outra plataforma e quer migrar, temos um serviço específico de migração que preserva o catálogo e o histórico de pedidos. Fale com a gente pelo WhatsApp para uma análise gratuita.'
+  },
+  {
+    q: 'Como faço para começar?',
+    a: 'Entre em contato pelo WhatsApp ou pelo formulário de orçamento. Em até 24 horas úteis enviamos uma proposta personalizada com escopo, prazo e investimento. Após aprovação e pagamento do sinal, a contagem dos 14 dias começa imediatamente.'
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Implantação de E-commerce Profissional",
+    "description": "A Elefef implanta lojas virtuais em até 14 dias nas plataformas Nuvemshop, Loja Integrada, Shopify e Tray. O serviço inclui configuração completa, SEO on-page, integrações de pagamento e frete, e treinamento remoto ao vivo.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Agência Elefef",
+      "url": "https://elefef.com.br",
+      "telephone": "+55-11-94063-5670",
+      "email": "contato@elefef.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Santo André",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      }
+    },
+    "serviceType": "Implantação de E-commerce",
+    "areaServed": { "@type": "Country", "name": "Brasil" },
+    "url": "https://elefef.com.br/implantacao-ecommerce"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": { "@type": "Answer", "text": item.a }
+    }))
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://elefef.com.br" },
+      { "@type": "ListItem", "position": 2, "name": "E-commerce", "item": "https://elefef.com.br/ecommerce" },
+      { "@type": "ListItem", "position": 3, "name": "Implantação de E-commerce", "item": "https://elefef.com.br/implantacao-ecommerce" }
+    ]
+  }
+];
 ---
 <BaseLayout
-  title="Implantação de E-commerce em 14 dias – Agência Elefef"
-  description="Implantamos sua loja virtual em apenas 14 dias na NuvemShop, Loja Integrada, Shopify ou Tray. Briefing, design, integrações, cadastro de produtos e treinamento."
+  title="Implantação de E-commerce Profissional | Elefef"
+  description="Implantação de loja virtual profissional em até 14 dias. Nuvemshop, Loja Integrada, Shopify e Tray. Inclui SEO on-page, treinamento ao vivo e integrações. Solicite orçamento."
   canonical="https://elefef.com.br/implantacao-ecommerce"
   schema={schema}
 >
   <Header />
   <main>
 
-    <!-- HERO -->
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Navegação estrutural">
+      <div class="container">
+        <a href="/">Home</a> › <a href="/ecommerce">E-commerce</a> › <span>Implantação de E-commerce</span>
+      </div>
+    </nav>
+
+    <!-- 1. HERO -->
     <section class="page-hero">
       <div class="container">
         <p class="section-tag light">Soluções E-commerce</p>
-        <h1>Implantamos sua loja virtual em apenas <span style="color:var(--ciano);">14 dias</span></h1>
-        <p>Da escolha da plataforma ao cadastro de produtos, cuide do seu negócio enquanto nós cuidamos da sua loja.</p>
-        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
-          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
-          <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20no%20WhatsApp" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <h1>Implantação de E-commerce Profissional<br>em Até <span style="color:var(--ciano)">14 Dias</span></h1>
+        <p>Loja virtual completa na Nuvemshop, Loja Integrada, Shopify ou Tray. Do briefing à primeira venda — SEO, design, pagamentos, frete, produtos de teste e treinamento ao vivo, tudo incluso.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:24px;">
+          <a
+            href={`https://api.whatsapp.com/send?phone=${WA}&text=${WA_HERO}`}
+            class="btn btn-ciano btn-lg"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:text-bottom;margin-right:8px;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Solicitar Orçamento no WhatsApp
+          </a>
+          <a href="#como-funciona" class="btn btn-outline btn-lg">Ver como funciona</a>
         </div>
+        <p style="margin-top:24px;font-size:13px;color:rgba(255,255,255,.65);">+30 lojas implantadas &nbsp;·&nbsp; Parceiro Nuvemshop &amp; Tray &nbsp;·&nbsp; Entrega garantida em 14 dias</p>
       </div>
     </section>
 
-    <!-- STATS BAR -->
-    <div class="stats-bar">
+    <!-- 2. BARRA DE PLATAFORMAS / CONFIANÇA -->
+    <div class="plataformas-bar">
       <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item"><strong>14 dias</strong><span>prazo de implantação</span></div>
-          <div class="stat-item"><strong>30+</strong><span>lojas implantadas</span></div>
-          <div class="stat-item"><strong>5h</strong><span>de treinamento incluídas</span></div>
-          <div class="stat-item"><strong>4</strong><span>plataformas disponíveis</span></div>
-        </div>
+        <p class="plataformas-bar-label">Plataformas em que trabalhamos</p>
+        <ul class="plataformas-bar-list" aria-label="Plataformas de e-commerce parceiras">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Nuvemshop
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Loja Integrada
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            Shopify
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Tray Commerce
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12H3l9-9 9 9h-2M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+            Melhor Envio
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Frenet
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Nuvem Envios
+          </li>
+        </ul>
       </div>
     </div>
 
-    <!-- IMPLANTAÇÃO COMPLETA -->
+    <!-- 3. DORES + VIRADA -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Você se identifica?</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Os problemas que a <span>Elefef resolve</span></h2>
+          <p class="section-sub">Cada obstáculo abaixo tem uma solução clara — e um prazo definido para acontecer.</p>
+        </div>
+        <div class="dores-grid">
+          <div class="card">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Sua loja demora pra sair do papel?</h3>
+            <p>Agências tradicionais demoram 60, 90 dias. A Elefef entrega em até <strong>14 dias corridos</strong>, com metodologia testada em mais de 30 projetos.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            </div>
+            <h3>Tem loja mas não vende?</h3>
+            <p>Frete mal configurado, checkout confuso e navegação ruim matam conversão. Implantamos com foco em <strong>usabilidade e taxa de conversão</strong> desde o início.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>Perdido na escolha da plataforma?</h3>
+            <p>Nuvemshop, Shopify, Loja Integrada, Tray — cada uma serve um perfil. Somos <strong>especialistas multi-plataforma</strong> e indicamos a ideal para o seu negócio.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Medo de ficar sem suporte?</h3>
+            <p>Entregamos com <strong>treinamento remoto ao vivo</strong> no Google Meet e acompanhamento via Trello ou Notion. Você aprende a operar a loja no primeiro dia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. O QUE ESTÁ INCLUSO -->
     <section class="section">
       <div class="container">
-        <div class="feature-grid">
-          <div class="feature-img">
-            <img src="/images/implementacao-de-loja-virtual-1.png" alt="Implantação de E-commerce" loading="lazy">
+        <div class="text-center">
+          <span class="section-tag">Escopo completo</span>
+          <div class="divider"></div>
+          <h2 class="section-title">O que está incluso na <span>implantação</span></h2>
+          <p class="section-sub">Tudo que sua loja precisa para funcionar e vender no primeiro dia — sem cobranças extras surpresa.</p>
+        </div>
+        <div class="incluso-grid">
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <h3>Tema profissional</h3>
+            <p>Instalação e configuração do tema mais adequado ao seu segmento, com customização de cores, fontes e layout.</p>
           </div>
-          <div class="feature-content">
-            <span class="section-tag">Implantação completa</span>
-            <div class="divider left"></div>
-            <h2>Sua loja do zero ao primeiro venda em 14 dias</h2>
-            <p>Nossa metodologia de implantação garante que sua loja esteja completamente configurada, com produtos cadastrados e pronta para vender em apenas duas semanas.</p>
-            <ul class="feature-list">
-              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Briefing completo e escolha estratégica da plataforma</li>
-              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Arquitetura de navegação e filtros</li>
-              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Design personalizado com tema otimizado</li>
-              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Configuração de ERP e integrações</li>
-              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Cadastro de produtos com SEO</li>
-              <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Fotografia de produtos e treinamento</li>
-            </ul>
-            <a href="/orcamento" class="btn btn-primary">Quero minha loja em 14 dias</a>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <h3>Logo profissional</h3>
+            <p>Criação ou adaptação de logotipo profissional alinhado à identidade visual do seu negócio.</p>
           </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+            <h3>Navegação completa</h3>
+            <p>Menus desktop e mobile, categorias, subcategorias e filtros planejados para máxima usabilidade.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+            <h3>Até 12 produtos de teste</h3>
+            <p>Cadastro com fotos, descrições otimizadas para SEO, preços e estoque configurados.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+            <h3>SEO on-page incluso</h3>
+            <p>H1 customizável, title, meta description, geração de sitemap e meta tags de loja, categorias e produtos.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+            <h3>Redes sociais</h3>
+            <p>Integração com Instagram, Facebook, Pinterest e configuração de social proof na loja.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 4v3h-7V8zM1 16l3 2M12 16l-3 2"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <h3>Frete configurado</h3>
+            <p>Integração com Correios, Frenet, Melhor Envio, Enviáli ou Nuvem Envios conforme sua operação.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3>Pagamento e checkout</h3>
+            <p>Configuração de gateway de pagamento, checkout otimizado e status de pedidos personalizados.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <h3>Até 5 páginas institucionais</h3>
+            <p>Sobre nós, política de entrega, trocas e devoluções e outras páginas essenciais para a loja.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <h3>E-mails transacionais</h3>
+            <p>Configuração de e-mails de confirmação de pedido, pagamento, envio e entrega personalizados.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+            <h3>5 pedidos de teste</h3>
+            <p>Validação completa do fluxo de compra: carrinho, checkout, pagamento, e-mail e status do pedido.</p>
+          </div>
+          <div class="incluso-item">
+            <div class="incluso-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87V15.13a1 1 0 01-1.447.9L15 14M3 8h12a2 2 0 012 2v4a2 2 0 01-2 2H3a2 2 0 01-2-2v-4a2 2 0 012-2z"/></svg></div>
+            <h3>Treinamento ao vivo</h3>
+            <p>Sessão remota no Google Meet: cadastro de produtos, categorias, banners, cupons e dicas de SEO.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+          <a href={`https://api.whatsapp.com/send?phone=${WA}&text=${WA_ESCOPO}`} class="btn btn-primary" target="_blank" rel="noopener">Quero saber mais sobre o escopo</a>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-banner">
+    <!-- 5. COMO FUNCIONA — TIMELINE 14 DIAS -->
+    <section class="section bg-cinza" id="como-funciona">
       <div class="container">
-        <h2>Sua loja virtual em <span>14 dias, garantido.</span></h2>
-        <p>Solicite um orçamento e receba uma proposta personalizada para a implantação do seu e-commerce.</p>
-        <div class="cta-btns">
-          <a href="/orcamento" class="btn btn-ciano btn-lg">Solicitar Orçamento</a>
-          <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20falar%20no%20WhatsApp" class="btn btn-outline btn-lg" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <div class="text-center">
+          <span class="section-tag">Processo</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Como funciona a <span>implantação em 14 dias</span></h2>
+          <p class="section-sub">Metodologia testada em mais de 30 projetos, com marcos claros e acompanhamento em tempo real via Trello ou Notion.</p>
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-badge">Dia 1</div>
+            <h3>Análise de requisitos</h3>
+            <p>Reunião de kick-off, alinhamento de escopo, prazos e objetivos da loja virtual.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-badge">Dia 2</div>
+            <h3>Briefing</h3>
+            <p>30+ perguntas estratégicas: público, concorrência, produtos, identidade visual e plataforma ideal.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-badge">Dia 6</div>
+            <h3>Header, footer e logo</h3>
+            <p>Estrutura visual montada: navegação, identidade visual, logo profissional e banners de teste.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-badge">Dia 8</div>
+            <h3>Pagamentos e frete</h3>
+            <p>Gateway de pagamento, checkout, frete e integrações de logística configurados e testados.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-badge">Dia 10</div>
+            <h3>Conteúdos</h3>
+            <p>Páginas institucionais, e-mails transacionais, integrações com redes sociais e SEO on-page.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-badge">Dia 11</div>
+            <h3>Revisão e testes</h3>
+            <p>5 pedidos de teste, revisão de todo o fluxo de compra e ajustes finais antes da entrega.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-badge">Dia 12</div>
+            <h3>Cadastro de produtos</h3>
+            <p>Até 12 produtos de teste com fotos, descrições otimizadas para SEO, preços e estoque.</p>
+          </div>
+          <div class="tl-item tl-destaque">
+            <div class="tl-badge tl-badge-ciano">Dia 14</div>
+            <h3>Entrega + Treinamento</h3>
+            <p>Go live oficial + treinamento remoto ao vivo via Google Meet. Sua loja vendendo!</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PLATAFORMAS -->
-    <section class="section bg-cinza">
+    <!-- 6. PLATAFORMAS QUE IMPLANTAMOS -->
+    <section class="section">
       <div class="container">
         <div class="text-center">
           <span class="section-tag">Plataformas</span>
           <div class="divider"></div>
-          <h2 class="section-title">Trabalhamos com as <span>melhores plataformas</span></h2>
+          <h2 class="section-title">Qual a melhor plataforma para <span>sua loja?</span></h2>
+          <p class="section-sub">Somos especialistas em 4 plataformas líderes do mercado brasileiro. A escolha certa depende do seu negócio, orçamento e onde você quer chegar.</p>
         </div>
-        <div class="cards-grid">
-          <div class="card text-center">
-            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-            <h3>NuvemShop</h3>
-            <p>Parceiro oficial. Plataforma ideal para pequenos e médios negócios com ótimo custo-benefício.</p>
+        <div class="platform-grid">
+          <div class="platform-card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+            <h3>Nuvemshop</h3>
+            <p style="font-size:12px;color:#197278;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Parceiro Oficial</p>
+            <p style="font-size:14px;">Ideal para pequenos e médios negócios brasileiros. Ótimo custo-benefício, suporte em português e integração nativa com os maiores marketplaces do Brasil.</p>
+            <p style="font-size:13px;color:var(--texto);margin-top:12px;"><strong>Indicado para:</strong> lojistas iniciantes e pequenas marcas focadas no mercado brasileiro.</p>
           </div>
-          <div class="card text-center">
-            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="platform-card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
             <h3>Loja Integrada</h3>
-            <p>Excelente para quem está começando. Integração nativa com marketplaces e frete.</p>
+            <p style="font-size:12px;color:var(--texto);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Ótimo Custo-Benefício</p>
+            <p style="font-size:14px;">Plataforma brasileira robusta com plano gratuito para começar. Forte em integrações com marketplaces como Mercado Livre, Shopee e Amazon.</p>
+            <p style="font-size:13px;color:var(--texto);margin-top:12px;"><strong>Indicado para:</strong> quem quer começar com baixo investimento e crescer junto com a loja.</p>
           </div>
-          <div class="card text-center">
-            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <div class="platform-card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
             <h3>Shopify</h3>
-            <p>Plataforma global robusta ideal para quem quer escalar e vender internacionalmente.</p>
+            <p style="font-size:12px;color:var(--texto);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Referência Global</p>
+            <p style="font-size:14px;">A plataforma mais usada no mundo. Ecossistema enorme de apps, checkout de alta conversão e ideal para escalar e vender internacionalmente.</p>
+            <p style="font-size:13px;color:var(--texto);margin-top:12px;"><strong>Indicado para:</strong> marcas com ambição de crescimento acelerado e vendas globais.</p>
           </div>
-          <div class="card text-center">
-            <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <div class="platform-card" style="text-align:center;">
+            <div class="card-icon" style="margin:0 auto 16px;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E73BE" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
             <h3>Tray Commerce</h3>
-            <p>Parceiro oficial Tray. Ideal para médias e grandes lojas com necessidade de personalização avançada.</p>
+            <p style="font-size:12px;color:#197278;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">Parceiro Oficial</p>
+            <p style="font-size:14px;">Plataforma brasileira robusta para médias e grandes operações. Permite personalizações avançadas, ERP integrado e alta escalabilidade.</p>
+            <p style="font-size:13px;color:var(--texto);margin-top:12px;"><strong>Indicado para:</strong> operações mais estruturadas que precisam de recursos avançados.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:40px;">
+          <p style="font-size:16px;color:var(--texto);margin-bottom:20px;">Ainda não sabe qual escolher?</p>
+          <a href={`https://api.whatsapp.com/send?phone=${WA}&text=${WA_PLATAFORMA}`} class="btn btn-outline-azul btn-lg" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#1E73BE" aria-hidden="true" style="vertical-align:text-bottom;margin-right:8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Não sei qual escolher — me ajuda!
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PROVA SOCIAL -->
+    <section class="section bg-cinza">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">Resultados</span>
+          <div class="divider"></div>
+          <h2 class="section-title">Mais de <span>30 lojas entregues</span></h2>
+        </div>
+        <div class="stats-row">
+          <div class="stat-box">
+            <strong>+30</strong>
+            <span>lojas implantadas</span>
+          </div>
+          <div class="stat-box">
+            <strong>14 dias</strong>
+            <span>prazo garantido</span>
+          </div>
+          <div class="stat-box">
+            <strong>4</strong>
+            <span>plataformas disponíveis</span>
+          </div>
+          <div class="stat-box">
+            <strong>30+</strong>
+            <span>perguntas no briefing</span>
+          </div>
+        </div>
+        <!-- TODO: inserir depoimentos reais -->
+        <div class="cards-grid" style="margin-top:48px;">
+          <div class="testimonial-card">
+            <p class="testimonial-stars">★★★★★</p>
+            <p>"Em menos de duas semanas minha loja estava no ar, vendendo e com tudo configurado. O treinamento foi essencial para eu conseguir operar sozinha."</p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
+              <div class="testimonial-avatar">M</div>
+              <div>
+                <strong style="font-size:14px;color:var(--escuro);display:block;">Maria S.</strong>
+                <span style="font-size:12px;color:var(--texto);">Loja de moda feminina — Nuvemshop</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-stars">★★★★★</p>
+            <p>"Escolhemos a Tray por recomendação deles e foi a decisão certa. O processo foi rápido, organizado e entregaram exatamente o que prometeram."</p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
+              <div class="testimonial-avatar">R</div>
+              <div>
+                <strong style="font-size:14px;color:var(--escuro);display:block;">Ricardo A.</strong>
+                <span style="font-size:12px;color:var(--texto);">E-commerce de eletrônicos — Tray Commerce</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-stars">★★★★★</p>
+            <p>"Não sabia nada de e-commerce. Com o briefing detalhado e o treinamento ao vivo, aprendi tudo que precisava para administrar a loja com confiança."</p>
+            <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
+              <div class="testimonial-avatar">C</div>
+              <div>
+                <strong style="font-size:14px;color:var(--escuro);display:block;">Carla M.</strong>
+                <span style="font-size:12px;color:var(--texto);">Artesanato e presentes — Loja Integrada</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ETAPAS -->
+    <!-- 8. FAQ -->
     <section class="section">
       <div class="container">
         <div class="text-center">
-          <span class="section-tag">Etapas</span>
+          <span class="section-tag">Dúvidas frequentes</span>
           <div class="divider"></div>
-          <h2 class="section-title">Nossa estratégia de <span>implantação</span></h2>
+          <h2 class="section-title">Perguntas sobre a <span>Implantação de E-commerce</span></h2>
         </div>
-        <div class="steps-grid">
-          <div class="step-item"><div class="step-num">1</div><h3>Briefing</h3><p>Levantamento completo de necessidades, público-alvo, concorrência e objetivos do negócio.</p></div>
-          <div class="step-item"><div class="step-num">2</div><h3>Arquitetura</h3><p>Definição de menus, categorias, filtros e estrutura da loja para máxima usabilidade.</p></div>
-          <div class="step-item"><div class="step-num">3</div><h3>Design e Config</h3><p>Seleção e customização do tema, identidade visual, páginas institucionais e integrações.</p></div>
-          <div class="step-item"><div class="step-num">4</div><h3>Produtos e Go Live</h3><p>Cadastro de produtos com fotos, descrições SEO, estratégia de preços e lançamento da loja.</p></div>
+        <div style="max-width:780px;margin:48px auto 40px;">
+          {faqItems.map(item => (
+            <details class="faq-item">
+              <summary class="faq-question">{item.q}</summary>
+              <div class="faq-answer"><p>{item.a}</p></div>
+            </details>
+          ))}
+        </div>
+        <div style="text-align:center;">
+          <p style="font-size:15px;color:var(--texto);margin-bottom:20px;">Ficou com alguma dúvida não respondida?</p>
+          <a href={`https://api.whatsapp.com/send?phone=${WA}&text=${WA_FAQ}`} class="btn btn-outline-azul" target="_blank" rel="noopener">Perguntar no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CTA FINAL -->
+    <section class="cta-banner">
+      <div class="container">
+        <h2>Pronto para vender online? <span>Fale com um especialista agora.</span></h2>
+        <p>Sua loja virtual em até 14 dias, com tudo que você precisa para começar a faturar. Solicite um orçamento sem compromisso.</p>
+        <div class="cta-btns">
+          <a href={`https://api.whatsapp.com/send?phone=${WA}&text=${WA_FINAL}`} class="btn btn-ciano btn-lg" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="vertical-align:text-bottom;margin-right:8px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Quero começar agora
+          </a>
+          <a href="/orcamento" class="btn btn-outline btn-lg">Solicitar orçamento</a>
         </div>
       </div>
     </section>
 
   </main>
   <Footer />
-  <WhatsAppFloat />
+  <WhatsAppFloat message={WA_HERO} />
 </BaseLayout>
+
+<style>
+  /* PLATAFORMAS BAR */
+  .plataformas-bar {
+    background: #fff;
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+    padding: 20px 0;
+  }
+  .plataformas-bar-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #aaa;
+    margin-bottom: 14px;
+  }
+  .plataformas-bar-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .plataformas-bar-list li {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--escuro);
+  }
+  .plataformas-bar-list svg { color: var(--azul); }
+
+  /* DORES GRID — 2 colunas */
+  .dores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  /* INCLUSO GRID — 4 colunas */
+  .incluso-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+  .incluso-item {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    padding: 22px 18px;
+    transition: box-shadow var(--trans), transform var(--trans);
+  }
+  .incluso-item:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    transform: translateY(-3px);
+  }
+  .incluso-icon {
+    width: 44px;
+    height: 44px;
+    background: #f0f6ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .incluso-item h3 {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--escuro);
+    margin-bottom: 6px;
+  }
+  .incluso-item p {
+    font-size: 13px;
+    color: var(--texto);
+    line-height: 1.6;
+  }
+
+  /* TIMELINE — 4 colunas, 2 linhas */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .tl-item {
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    padding: 22px 18px;
+    text-align: center;
+  }
+  .tl-destaque {
+    border-color: var(--ciano);
+    box-shadow: 0 4px 16px rgba(21,230,245,.18);
+  }
+  .tl-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 14px;
+    border-radius: 50px;
+    background: var(--azul);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .tl-badge-ciano {
+    background: var(--ciano);
+    color: #003d47;
+  }
+  .tl-item h3 {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--escuro);
+    margin-bottom: 7px;
+  }
+  .tl-item p {
+    font-size: 12.5px;
+    color: var(--texto);
+    line-height: 1.6;
+  }
+
+  /* PLATFORM GRID — 4 colunas */
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  /* STATS ROW — 4 colunas */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+  }
+  .stat-box {
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    padding: 28px 16px;
+  }
+  .stat-box strong {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--azul);
+    line-height: 1.1;
+  }
+  .stat-box span {
+    display: block;
+    font-size: 13px;
+    color: var(--texto);
+    margin-top: 6px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 960px) {
+    .incluso-grid    { grid-template-columns: repeat(2, 1fr); }
+    .timeline        { grid-template-columns: repeat(2, 1fr); }
+    .platform-grid   { grid-template-columns: repeat(2, 1fr); }
+    .stats-row       { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .dores-grid      { grid-template-columns: 1fr; }
+    .incluso-grid    { grid-template-columns: 1fr; }
+    .timeline        { grid-template-columns: 1fr; }
+    .platform-grid   { grid-template-columns: 1fr; }
+  }
+</style>
