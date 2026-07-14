@@ -117,6 +117,20 @@ const schemas = [orgSchema, websiteSchema, ...(schema ? (Array.isArray(schema) ?
 <body>
   <slot />
 
+  <!-- Google Ads: conversão de clique de saída para WhatsApp -->
+  <script>
+    document.addEventListener('click', (e) => {
+      const link = (e.target as HTMLElement)?.closest('a[href*="api.whatsapp.com"], a[href*="wa.me"]');
+      if (link && typeof (window as any).gtag === 'function') {
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-11341187414/b_wrCMXj5PQaENaS858q',
+          'value': 1.0,
+          'currency': 'BRL'
+        });
+      }
+    });
+  </script>
+
   <!-- FAQ accordion script (zero-dependency, inline) -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
