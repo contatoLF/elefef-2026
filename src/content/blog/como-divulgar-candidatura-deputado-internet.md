@@ -34,7 +34,7 @@ O site é a central digital da campanha. Funciona como hub que consolida propost
 
 **Tecnologia recomendada**: Astro, WordPress ou plataforma similar. O site deve carregar em menos de 2 segundos no mobile — eleitores em smartphones não esperam.
 
-### Pilar 2: Redes sociais (Instagram, Facebook, TikTok, YouTube)
+### Pilar 2: Redes sociais (Instagram, Facebook, YouTube)
 
 Cada plataforma tem seu papel:
 
@@ -42,10 +42,9 @@ Cada plataforma tem seu papel:
 |---|---|---|
 | Instagram | 18–45 anos | Fotos, Reels curtos, Stories do dia a dia |
 | Facebook | 35–65 anos | Artigos, eventos, vídeos longos, grupos |
-| TikTok | 16–35 anos | Vídeos curtos, bastidores, humor político |
 | YouTube | Todos | Vídeos de proposta, entrevistas, debate |
 
-**Frequência mínima recomendada**: 1 post/dia no Instagram, 3–5 posts/semana no Facebook, 2–3 Reels ou TikToks/semana.
+**Frequência mínima recomendada**: 1 post/dia no Instagram, 3–5 posts/semana no Facebook, 2–3 Reels/semana.
 
 ### Pilar 3: WhatsApp estratégico
 
@@ -102,18 +101,6 @@ E-mail é o canal mais direto e pessoal. Uma base de 5.000 apoiadores com e-mail
 - Vídeos de encerramento de campanha com pedido direto de voto
 - Anúncios de urgência: "Falta X dias" com contagem regressiva
 - WhatsApp intensivo para a base de apoiadores
-
-## Quanto investir em presença digital para deputado?
-
-Referência de investimento mensal em presença digital para candidato a deputado estadual (SP) ou federal (estado médio):
-
-| Item | Pré-campanha | Campanha oficial |
-|---|---|---|
-| Gestão de redes sociais (produção + postagem) | R$ 2.000–5.000 | R$ 3.000–8.000 |
-| Tráfego pago (Meta + YouTube) | R$ 2.000–8.000 | R$ 10.000–40.000 |
-| Site + manutenção | R$ 500–2.000 | R$ 500–1.000 |
-| Produção de vídeo | R$ 1.000–5.000 | R$ 3.000–10.000 |
-| Crowdfunding eleitoral | — | R$ 0 (receita) |
 
 ## FAQ: Divulgação de Candidatura a Deputado na Internet
 

@@ -57,9 +57,6 @@ Ideal para vídeos de campanha, depoimentos e programas políticos. Vantagens:
 ### Google Display e Search
 Search Ads (anúncios de busca) são úteis para quem já tem nome reconhecido — capturam buscas pelo nome do candidato. Display funciona para reconhecimento de marca e remarketing.
 
-### TikTok Ads
-Alcança eleitores jovens (18–35 anos). Requer conteúdo nativo (vídeo curto, linguagem informal). Pode ser muito eficaz em eleições com eleitorado jovem.
-
 ## Estratégia de tráfego pago eleitoral: pré-campanha + campanha
 
 ### Fase 1: Pré-campanha (janeiro a agosto de 2026)

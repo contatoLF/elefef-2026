@@ -86,11 +86,6 @@ Depoimentos de apoiadores, parceiros, líderes comunitários e formadores de opi
 - Debate de tema político com profundidade
 - Anúncio de eventos e mobilização
 
-**TikTok (15 a 30 segundos)**: público jovem, linguagem informal. Foque em:
-- Humor sobre temas do cotidiano político
-- Respostas a perguntas dos eleitores
-- Quebra de mitos políticos
-
 **YouTube (5 a 20 minutos)**: conteúdo de autoridade que ficará indexado no Google. Foque em:
 - Programa do candidato completo
 - Entrevistas em rádios e podcasts locais

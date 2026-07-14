@@ -1,6 +1,6 @@
 ---
 title: "Tráfego Pago Eleitoral: o que a Legislação do TSE Permite em 2026"
-description: "Guia jurídico-prático sobre o que o TSE permite em anúncios pagos durante pré-campanha e campanha eleitoral de 2026 — Meta Ads, Google Ads, TikTok, prestação de contas e limites de gasto."
+description: "Guia jurídico-prático sobre o que o TSE permite em anúncios pagos durante pré-campanha e campanha eleitoral de 2026 — Meta Ads, Google Ads, prestação de contas e limites de gasto."
 pubDate: 2026-03-07
 author: "Luiz Felipe Freitas"
 category: "Marketing Político"
@@ -17,7 +17,7 @@ As normas que regulam a propaganda eleitoral digital derivam principalmente de:
 
 - **Lei nº 9.504/1997** (Lei das Eleições) — artigos 57-A a 57-I, que tratam da propaganda eleitoral na internet
 - **Resoluções do TSE** — especialmente as Resoluções emitidas a cada ciclo eleitoral (para 2026, aguardar Resolução específica)
-- **Regulamentação das plataformas** — Meta, Google e TikTok têm políticas próprias que se somam à lei brasileira
+- **Regulamentação das plataformas** — Meta e Google têm políticas próprias que se somam à lei brasileira
 
 ## Período da pré-campanha: o que é permitido?
 
@@ -27,7 +27,7 @@ A pré-campanha vai do início do ano eleitoral (janeiro de 2026) até o início
 - Manutenção de perfis e páginas nas redes sociais
 - Publicação de conteúdo com posicionamentos políticos e propostas (sem pedir votos)
 - **Impulsionamento pago de publicações** que não configurem propaganda eleitoral antecipada (posição política genérica, não pedido de voto)
-- Crescimento de base de seguidores via Meta Ads, TikTok Ads, etc.
+- Crescimento de base de seguidores via Meta Ads, etc.
 - Tráfego para site do pré-candidato com conteúdo político (sem "vote em mim")
 
 ### Vedado na pré-campanha:
@@ -42,7 +42,7 @@ A pré-campanha vai do início do ano eleitoral (janeiro de 2026) até o início
 A campanha oficial para deputados, senadores, governadores e presidente vai de **16 de agosto a 4 de outubro de 2026**.
 
 ### Permitido na campanha oficial:
-- Anúncios pagos em **plataformas de redes sociais** (Meta, TikTok, Google Display, YouTube)
+- Anúncios pagos em **plataformas de redes sociais** (Meta, Google Display, YouTube)
 - Uso de recursos do fundo eleitoral para pagar mídia digital (com nota fiscal e prestação de contas)
 - Tráfego pago para site oficial de campanha
 - Anúncios de vídeo no YouTube pedindo votos
@@ -56,7 +56,7 @@ A campanha oficial para deputados, senadores, governadores e presidente vai de *
 
 ## Identificação de conteúdo eleitoral nas plataformas
 
-Desde as eleições de 2022, o Meta, Google e TikTok exigem que anunciantes de conteúdo político/eleitoral passem por verificação de identidade e incluam o **aviso de quem pagou o anúncio** ("Pago por...").
+Desde as eleições de 2022, o Meta e o Google exigem que anunciantes de conteúdo político/eleitoral passem por verificação de identidade e incluam o **aviso de quem pagou o anúncio** ("Pago por...").
 
 ### No Meta Ads:
 1. Acesse o Gerenciador de Anúncios
@@ -76,7 +76,7 @@ Anúncios eleitorais sem verificação ou sem o aviso de financiador **serão re
 Todo recurso gasto com anúncios digitais durante a campanha oficial deve constar na prestação de contas ao TSE. O processo:
 
 1. **Nota fiscal do serviço de gestão**: emitida pela agência (Elefef) com descrição do serviço de gestão de tráfego pago
-2. **Comprovante de pagamento de mídia**: recibos/faturas do Meta, Google, TikTok, etc., pagos diretamente pelo candidato ou pelo partido à plataforma
+2. **Comprovante de pagamento de mídia**: recibos/faturas do Meta, Google, etc., pagos diretamente pelo candidato ou pelo partido à plataforma
 3. **Lançamento no sistema do TSE**: nome do fornecedor, CNPJ/CPF, valor, tipo de gasto (propaganda eleitoral digital), descrição
 
 **Importante**: o pagamento de mídia deve sair da conta bancária da campanha, não de conta pessoal do candidato. Se sair da conta pessoal, deve ser registrado como doação do candidato à própria campanha, dentro do limite legal.
