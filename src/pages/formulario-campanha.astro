@@ -1,0 +1,220 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+---
+<BaseLayout
+  title="Formulário de Campanha — Agência Elefef"
+  description="Preencha os dados da sua campanha eleitoral para receber uma proposta da Agência Elefef."
+  canonical="https://elefef.com.br/formulario-campanha"
+  noindex={true}
+>
+  <Header />
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero" style="padding:140px 0 56px;">
+      <div class="container">
+        <p class="section-tag light">Marketing Político</p>
+        <h1>Formulário de Campanha</h1>
+        <p>Preencha os dados abaixo para que a Élefef monte uma proposta sob medida para a sua candidatura.</p>
+      </div>
+    </section>
+
+    <!-- FORMULÁRIO CAMPANHA -->
+    <section class="section">
+      <div class="container">
+        <div style="max-width:700px;margin:0 auto;background:#fff;border:1px solid var(--borda);border-radius:16px;padding:40px;">
+          <form id="campanha-form">
+            <div class="campanha-form-grid">
+              <div>
+                <label for="c-nome-contato" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Nome do Contato *</label>
+                <input type="text" id="c-nome-contato" placeholder="Seu nome" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+              </div>
+              <div>
+                <label for="c-whatsapp" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">WhatsApp *</label>
+                <input type="tel" id="c-whatsapp" placeholder="(11) 9 0000-0000" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+              </div>
+            </div>
+
+            <div style="margin-top:20px;">
+              <label for="c-nome-candidato" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Nome do Candidato *</label>
+              <input type="text" id="c-nome-candidato" placeholder="Nome do candidato" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+              <label style="display:flex;align-items:center;gap:8px;margin-top:8px;font-size:13px;color:#666;cursor:pointer;">
+                <input type="checkbox" id="c-mesmo-nome" style="width:16px;height:16px;">
+                É o mesmo nome do contato
+              </label>
+            </div>
+
+            <div class="campanha-form-grid" style="margin-top:20px;">
+              <div>
+                <label for="c-partido" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Partido</label>
+                <input type="text" id="c-partido" placeholder="Ex: PSDB, PT, PSOL, PL, AVANTE" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+              </div>
+              <div>
+                <label for="c-cargo" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Cargo que vai disputar *</label>
+                <select id="c-cargo" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+                  <option value="">Selecione</option>
+                  <option>Dep. Estadual</option>
+                  <option>Dep. Federal</option>
+                  <option>Senador (a)</option>
+                  <option>Vice-governador (a)</option>
+                  <option>Governador (a)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="campanha-form-grid" style="margin-top:20px;">
+              <div>
+                <label for="c-estado" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Estado *</label>
+                <select id="c-estado" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+                  <option value="">Selecione</option>
+                  <option>Acre (AC)</option>
+                  <option>Alagoas (AL)</option>
+                  <option>Amapá (AP)</option>
+                  <option>Amazonas (AM)</option>
+                  <option>Bahia (BA)</option>
+                  <option>Ceará (CE)</option>
+                  <option>Distrito Federal (DF)</option>
+                  <option>Espírito Santo (ES)</option>
+                  <option>Goiás (GO)</option>
+                  <option>Maranhão (MA)</option>
+                  <option>Mato Grosso (MT)</option>
+                  <option>Mato Grosso do Sul (MS)</option>
+                  <option>Minas Gerais (MG)</option>
+                  <option>Pará (PA)</option>
+                  <option>Paraíba (PB)</option>
+                  <option>Paraná (PR)</option>
+                  <option>Pernambuco (PE)</option>
+                  <option>Piauí (PI)</option>
+                  <option>Rio de Janeiro (RJ)</option>
+                  <option>Rio Grande do Norte (RN)</option>
+                  <option>Rio Grande do Sul (RS)</option>
+                  <option>Rondônia (RO)</option>
+                  <option>Roraima (RR)</option>
+                  <option>Santa Catarina (SC)</option>
+                  <option>São Paulo (SP)</option>
+                  <option>Sergipe (SE)</option>
+                  <option>Tocantins (TO)</option>
+                </select>
+              </div>
+              <div>
+                <label for="c-instagram" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">@ do Instagram do candidato</label>
+                <input type="text" id="c-instagram" placeholder="@nomedocandidato" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+              </div>
+            </div>
+
+            <div style="margin-top:20px;">
+              <label for="c-meta-votos" style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:6px;">Meta de Votos</label>
+              <input type="text" id="c-meta-votos" placeholder="Ex: 50.000 votos" style="width:100%;padding:12px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:15px;font-family:'Figtree',sans-serif;color:#333;background:#fff;outline:none;box-sizing:border-box;">
+            </div>
+
+            <div style="margin-top:20px;">
+              <label style="display:block;font-size:14px;font-weight:600;color:#333;margin-bottom:10px;">Já foi candidato em outras eleições?</label>
+              <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                <label style="display:flex;align-items:center;gap:6px;font-size:14px;color:#333;border:1.5px solid var(--borda);border-radius:8px;padding:8px 14px;cursor:pointer;">
+                  <input type="checkbox" class="c-ano-eleicao" value="2024" style="width:16px;height:16px;">2024
+                </label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:14px;color:#333;border:1.5px solid var(--borda);border-radius:8px;padding:8px 14px;cursor:pointer;">
+                  <input type="checkbox" class="c-ano-eleicao" value="2022" style="width:16px;height:16px;">2022
+                </label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:14px;color:#333;border:1.5px solid var(--borda);border-radius:8px;padding:8px 14px;cursor:pointer;">
+                  <input type="checkbox" class="c-ano-eleicao" value="2020" style="width:16px;height:16px;">2020
+                </label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:14px;color:#333;border:1.5px solid var(--borda);border-radius:8px;padding:8px 14px;cursor:pointer;">
+                  <input type="checkbox" class="c-ano-eleicao" value="2018" style="width:16px;height:16px;">2018
+                </label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:14px;color:#333;border:1.5px solid var(--borda);border-radius:8px;padding:8px 14px;cursor:pointer;">
+                  <input type="checkbox" class="c-ano-eleicao" value="2016" style="width:16px;height:16px;">2016
+                </label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:14px;color:#333;border:1.5px solid var(--borda);border-radius:8px;padding:8px 14px;cursor:pointer;">
+                  <input type="checkbox" class="c-ano-eleicao" value="2014" style="width:16px;height:16px;">2014
+                </label>
+                <label style="display:flex;align-items:center;gap:6px;font-size:14px;color:#333;border:1.5px solid var(--borda);border-radius:8px;padding:8px 14px;cursor:pointer;">
+                  <input type="checkbox" class="c-ano-eleicao" value="2012" style="width:16px;height:16px;">2012
+                </label>
+              </div>
+            </div>
+
+            <button type="button" id="campanha-enviar-btn" class="btn btn-primary btn-lg" style="width:100%;text-align:center;margin-top:28px;">
+              Enviar via WhatsApp
+            </button>
+            <p style="font-size:12px;color:#999;margin-top:12px;text-align:center;">Ao enviar, você será redirecionado para o WhatsApp da Élefef.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer audience="eleitor" />
+  <WhatsAppFloat />
+</BaseLayout>
+
+<style>
+  .campanha-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 580px) {
+    .campanha-form-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const checkbox = document.getElementById('c-mesmo-nome') as HTMLInputElement;
+  const nomeContatoInput = document.getElementById('c-nome-contato') as HTMLInputElement;
+  const nomeCandidatoInput = document.getElementById('c-nome-candidato') as HTMLInputElement;
+  const enviarBtn = document.getElementById('campanha-enviar-btn');
+
+  checkbox?.addEventListener('change', () => {
+    if (checkbox.checked) {
+      nomeCandidatoInput.value = nomeContatoInput.value;
+      nomeCandidatoInput.readOnly = true;
+    } else {
+      nomeCandidatoInput.readOnly = false;
+    }
+  });
+
+  nomeContatoInput?.addEventListener('input', () => {
+    if (checkbox?.checked) {
+      nomeCandidatoInput.value = nomeContatoInput.value;
+    }
+  });
+
+  enviarBtn?.addEventListener('click', () => {
+    const nomeContato = nomeContatoInput.value;
+    const whatsapp = (document.getElementById('c-whatsapp') as HTMLInputElement).value;
+    const nomeCandidato = nomeCandidatoInput.value;
+    const partido = (document.getElementById('c-partido') as HTMLInputElement).value;
+    const cargo = (document.getElementById('c-cargo') as HTMLSelectElement).value;
+    const estado = (document.getElementById('c-estado') as HTMLSelectElement).value;
+    const instagram = (document.getElementById('c-instagram') as HTMLInputElement).value;
+    const metaVotos = (document.getElementById('c-meta-votos') as HTMLInputElement).value;
+    const anosEleicao = Array.from(document.querySelectorAll('.c-ano-eleicao:checked')) as HTMLInputElement[];
+    const anos = anosEleicao.map((el) => el.value);
+
+    if (!nomeContato || !whatsapp || !nomeCandidato || !cargo || !estado) {
+      alert('Por favor, preencha os campos obrigatórios (*).');
+      return;
+    }
+
+    let texto = `Olá! Sou *${nomeContato}* e gostaria de saber mais sobre Marketing Político Digital.`;
+    texto += '\n\n*Dados da campanha:*';
+    texto += `\nCandidato: ${nomeCandidato}`;
+    if (partido) texto += `\nPartido: ${partido}`;
+    texto += `\nCargo: ${cargo}`;
+    texto += `\nEstado: ${estado}`;
+    if (instagram) texto += `\nInstagram: ${instagram}`;
+    if (metaVotos) texto += `\nMeta de votos: ${metaVotos}`;
+    texto += anos.length ? `\nJá foi candidato em: ${anos.join(', ')}` : '\nNunca foi candidato antes';
+    texto += `\n\nWhatsApp do contato: ${whatsapp}`;
+
+    window.open(`https://api.whatsapp.com/send?phone=5511940635670&text=${encodeURIComponent(texto)}`, '_blank');
+  });
+});
+</script>
