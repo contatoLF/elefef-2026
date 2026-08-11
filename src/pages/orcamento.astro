@@ -53,7 +53,7 @@ const schema = {
             <h3>WhatsApp / Telegram</h3>
             <p>A forma mais rápida de falar com a gente. Respondemos em minutos durante o horário comercial.</p>
             <p style="font-size:20px;font-weight:700;color:#16a34a;margin-bottom:20px;">+55 11 94063-5670</p>
-            <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento" class="btn btn-primary" target="_blank" rel="noopener">Enviar mensagem</a>
+            <a href="https://api.whatsapp.com/send?phone=5511940635670&text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Elefef%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento" class="btn btn-primary" target="_blank" rel="noopener">Enviar mensagem</a>
           </div>
           <div class="card" style="text-align:center;">
             <div class="card-icon" style="background:#dbeafe;border-radius:50%;width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
@@ -192,7 +192,7 @@ function enviarWhatsApp() {
   const msg = (document.getElementById('mensagem') as HTMLTextAreaElement).value;
   let texto = `Olá! Sou *${nome}*`;
   if (empresa) texto += ` da empresa *${empresa}*`;
-  texto += '.\n\nVim pelo site e gostaria de solicitar um orçamento.';
+  texto += '.\n\nVim pelo site da Elefef e gostaria de solicitar um orçamento.';
   if (servico) texto += `\n\n*Serviço:* ${servico}`;
   if (tel) texto += `\n*Contato:* ${tel}`;
   if (msg) texto += `\n\n*Sobre o meu negócio:*\n${msg}`;
